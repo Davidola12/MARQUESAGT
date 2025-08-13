@@ -1,1031 +1,610 @@
-/* Variables CSS para colores personalizados Marquesa GT - RESPONSIVE OPTIMIZADO */
-:root {
-    --primary-color: #EABE3F;
-    --secondary-color: #000000;
-    --accent-color: #D4A934;
-    --dark-color: #000000;
-    --light-color: #f8fafc;
-    --success-color: #EABE3F;
-    --warning-color: #EABE3F;
-    --danger-color: #dc3545;
-    --text-muted: #64748b;
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marquesa GT - Transformamos Marcas, Potenciamos Negocios</title>
     
-    /* Degradados equilibrados y sutiles */
-    --gradient-primary: linear-gradient(135deg, #EABE3F 0%, #D4A934 100%);
-    --gradient-secondary: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
-    --gradient-gold: linear-gradient(135deg, #EABE3F 0%, #F5D76E 50%, #D4A934 100%);
-    --gradient-subtle: linear-gradient(145deg, #ffffff 0%, rgba(234, 190, 63, 0.02) 100%);
+    <!-- Preload del logo para mejor rendimiento -->
+    <link rel="preload" href="logos/Recurso 3.png" as="image" type="image/png">
     
-    /* Efectos de sombra más sutiles */
-    --shadow-soft: 0 4px 15px rgba(234, 190, 63, 0.15);
-    --shadow-medium: 0 8px 25px rgba(234, 190, 63, 0.2);
-    --shadow-strong: 0 15px 40px rgba(234, 190, 63, 0.25);
-    --shadow-black: 0 8px 25px rgba(0, 0, 0, 0.08);
-}
-
-/* Fuente personalizada */
-body {
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    overflow-x: hidden; /* Prevenir scroll horizontal */
-}
-
-/* Smooth scroll */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Container responsivo mejorado */
-.container {
-    max-width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-@media (min-width: 576px) {
-    .container {
-        max-width: 540px;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-}
-
-@media (min-width: 768px) {
-    .container {
-        max-width: 720px;
-    }
-}
-
-@media (min-width: 992px) {
-    .container {
-        max-width: 960px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1140px;
-    }
-}
-
-/* Navbar responsivo mejorado */
-.navbar {
-    backdrop-filter: blur(20px);
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.98) 0%, rgba(234, 190, 63, 0.02) 100%) !important;
-    border-bottom: 1px solid rgba(234, 190, 63, 0.1);
-    transition: all 0.3s ease;
-    z-index: 1030;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.04);
-    padding: 0.5rem 0;
-}
-
-.navbar-brand {
-    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-    font-weight: 700;
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.nav-link {
-    font-weight: 500;
-    transition: all 0.3s ease;
-    position: relative;
-    color: var(--dark-color) !important;
-    font-size: clamp(0.875rem, 1.5vw, 1rem);
-    padding: 0.5rem 1rem !important;
-}
-
-.nav-link:hover {
-    color: var(--primary-color) !important;
-    transform: translateY(-1px);
-}
-
-.nav-link.active {
-    color: var(--primary-color) !important;
-    font-weight: 600;
-}
-
-.nav-link::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 50%;
-    background: var(--primary-color);
-    transition: all 0.3s ease;
-    transform: translateX(-50%);
-    border-radius: 2px;
-}
-
-.nav-link:hover::after,
-.nav-link.active::after {
-    width: 100%;
-}
-
-/* Logos responsivos */
-.navbar-logo {
-    height: clamp(28px, 5vw, 40px);
-    width: auto;
-    transition: all 0.3s ease;
-    filter: drop-shadow(0 2px 8px rgba(234, 190, 63, 0.2)) brightness(1.05);
-}
-
-.navbar-brand:hover .navbar-logo {
-    transform: scale(1.05);
-    filter: drop-shadow(0 4px 12px rgba(234, 190, 63, 0.3)) brightness(1.1);
-}
-
-.footer-logo {
-    height: clamp(24px, 4vw, 32px);
-    width: auto;
-    filter: brightness(0) invert(1) sepia(1) saturate(2) hue-rotate(35deg) brightness(1.1);
-    transition: all 0.3s ease;
-}
-
-.footer-logo:hover {
-    transform: scale(1.05);
-    filter: brightness(0) invert(1) sepia(1) saturate(2) hue-rotate(35deg) brightness(1.2) drop-shadow(0 2px 8px rgba(234, 190, 63, 0.4));
-}
-
-/* Navbar toggler responsivo */
-.navbar-toggler {
-    border: none;
-    padding: 4px 8px;
-    border-radius: 8px;
-}
-
-.navbar-toggler:focus {
-    box-shadow: 0 0 0 0.2rem rgba(234, 190, 63, 0.25);
-}
-
-/* Dropdown mejorado para móviles */
-@media (max-width: 991.98px) {
-    .dropdown-menu {
-        background: rgba(255, 255, 255, 0.98);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(234, 190, 63, 0.2);
-        border-radius: 15px;
-        box-shadow: var(--shadow-medium);
-        margin-top: 10px;
-    }
+    <!-- Favicon -->
+    <link rel="icon" href="logos/Recurso 3.png" type="image/png">
+    <link rel="apple-touch-icon" href="logos/Recurso 3.png">
     
-    .dropdown-item {
-        padding: 12px 20px;
-        border-radius: 8px;
-        margin: 2px 5px;
-    }
-    
-    .dropdown-item:hover {
-        background: rgba(234, 190, 63, 0.1);
-        color: var(--primary-color);
-    }
-}
-
-/* Hero Section responsivo */
-.hero-section {
-    background: linear-gradient(135deg, #f8fafc 0%, rgba(234, 190, 63, 0.03) 30%, rgba(0, 0, 0, 0.02) 100%);
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-    padding: 80px 0 40px;
-}
-
-.hero-section::before {
-    content: '';
-    position: absolute;
-    top: -30%;
-    right: -20%;
-    width: 50%;
-    height: 120%;
-    background: radial-gradient(ellipse, rgba(234, 190, 63, 0.06) 0%, transparent 70%);
-    animation: float 8s ease-in-out infinite;
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-20px) rotate(5deg); }
-}
-
-.text-gradient {
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-/* Hero título responsivo */
-.hero-section h1 {
-    font-size: clamp(2rem, 6vw, 3.5rem);
-    line-height: 1.2;
-    margin-bottom: 1.5rem;
-}
-
-.hero-section .lead {
-    font-size: clamp(1rem, 2.5vw, 1.25rem);
-    line-height: 1.6;
-}
-
-/* Hero stats responsivo */
-.hero-stats {
-    background: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    padding: clamp(1rem, 3vw, 2rem);
-    border: 1px solid rgba(234, 190, 63, 0.1);
-    margin-bottom: 2rem;
-}
-
-.stat-item h3 {
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    font-weight: 800;
-    font-size: clamp(1.5rem, 4vw, 2rem);
-}
-
-.stat-item small {
-    font-size: clamp(0.75rem, 1.5vw, 0.875rem);
-}
-
-/* Hero image responsivo */
-.hero-image {
-    position: relative;
-    margin-top: 2rem;
-}
-
-.hero-image img {
-    border-radius: 20px;
-    box-shadow: var(--shadow-medium);
-    transition: all 0.3s ease;
-    width: 100%;
-    height: auto;
-    max-height: 500px;
-    object-fit: cover;
-}
-
-.hero-image:hover img {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow-strong);
-}
-
-.floating-card {
-    position: absolute;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    border-radius: 15px;
-    padding: clamp(0.75rem, 2vw, 1rem);
-    box-shadow: var(--shadow-soft);
-    border: 1px solid rgba(234, 190, 63, 0.1);
-    bottom: 20px;
-    right: 20px;
-    max-width: 250px;
-}
-
-.icon-box {
-    width: clamp(40px, 8vw, 50px);
-    height: clamp(40px, 8vw, 50px);
-    background: var(--gradient-primary);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #000000;
-    font-size: clamp(1rem, 2vw, 1.2rem);
-}
-
-/* Botones responsivos */
-.btn-primary {
-    background: var(--gradient-primary);
-    border: 2px solid #EABE3F;
-    border-radius: 50px;
-    padding: clamp(10px, 2vw, 12px) clamp(20px, 4vw, 30px);
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    transition: all 0.3s ease;
-    box-shadow: var(--shadow-soft);
-    position: relative;
-    overflow: hidden;
-    color: #000000 !important;
-    font-size: clamp(0.875rem, 1.5vw, 1rem);
-}
-
-.btn-primary::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-    transition: left 0.5s ease;
-}
-
-.btn-primary:hover::before {
-    left: 100%;
-}
-
-.btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-medium);
-    background: var(--gradient-gold);
-    border-color: #D4A934;
-    color: #000000 !important;
-}
-
-.btn-outline-primary {
-    border: 2px solid var(--primary-color);
-    color: var(--primary-color);
-    border-radius: 50px;
-    padding: clamp(8px, 2vw, 10px) clamp(20px, 4vw, 28px);
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    transition: all 0.3s ease;
-    background: transparent;
-    position: relative;
-    overflow: hidden;
-    font-size: clamp(0.875rem, 1.5vw, 1rem);
-}
-
-.btn-outline-primary::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--gradient-primary);
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
-    z-index: -1;
-}
-
-.btn-outline-primary:hover::before {
-    transform: scaleX(1);
-}
-
-.btn-outline-primary:hover {
-    border-color: var(--primary-color);
-    color: #000000 !important;
-    transform: translateY(-1px);
-    box-shadow: var(--shadow-soft);
-}
-
-.btn-success {
-    background: var(--gradient-primary);
-    border: 2px solid var(--primary-color);
-    border-radius: 50px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    color: #000000 !important;
-    box-shadow: var(--shadow-soft);
-    font-size: clamp(0.875rem, 1.5vw, 1rem);
-}
-
-.btn-success:hover {
-    background: var(--gradient-gold);
-    border-color: var(--primary-color);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-medium);
-    color: #000000 !important;
-}
-
-/* Botones en grupo responsivos */
-.d-flex.gap-3 {
-    gap: clamp(0.5rem, 2vw, 1rem) !important;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-}
-
-/* Service cards responsivas */
-.service-main-card {
-    background: var(--gradient-subtle);
-    border: 1px solid rgba(234, 190, 63, 0.08);
-    border-radius: 20px;
-    padding: clamp(1.5rem, 3vw, 2rem);
-    transition: all 0.3s ease;
-    box-shadow: var(--shadow-black);
-    position: relative;
-    overflow: hidden;
-    height: 100%;
-}
-
-.service-main-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: var(--gradient-primary);
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
-}
-
-.service-main-card:hover::before {
-    transform: scaleX(1);
-}
-
-.service-main-card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-soft), var(--shadow-black);
-    border-color: rgba(234, 190, 63, 0.2);
-}
-
-.service-icon {
-    width: clamp(60px, 10vw, 80px);
-    height: clamp(60px, 10vw, 80px);
-    background: var(--gradient-primary);
-    color: #000000;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    margin: 0 auto;
-    transition: all 0.3s ease;
-    box-shadow: var(--shadow-soft);
-    border: 2px solid rgba(234, 190, 63, 0.2);
-}
-
-.service-main-card:hover .service-icon {
-    transform: scale(1.1) rotate(8deg);
-    background: var(--gradient-gold);
-    box-shadow: var(--shadow-medium);
-}
-
-/* Títulos y texto responsivos */
-.display-5 {
-    font-size: clamp(1.75rem, 4vw, 2.5rem) !important;
-}
-
-.display-3 {
-    font-size: clamp(2rem, 6vw, 3.5rem) !important;
-}
-
-h4 {
-    font-size: clamp(1.25rem, 2.5vw, 1.5rem);
-}
-
-h5 {
-    font-size: clamp(1.125rem, 2vw, 1.25rem);
-}
-
-h6 {
-    font-size: clamp(1rem, 1.5vw, 1.125rem);
-}
-
-/* Proceso steps responsivo */
-.process-step {
-    text-align: center;
-    padding: clamp(1rem, 3vw, 2rem);
-    transition: all 0.3s ease;
-}
-
-.step-number {
-    width: clamp(50px, 8vw, 60px);
-    height: clamp(50px, 8vw, 60px);
-    background: var(--gradient-primary);
-    color: #000000;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: clamp(1.25rem, 2.5vw, 1.5rem);
-    font-weight: 700;
-    margin: 0 auto 1rem;
-    transition: all 0.3s ease;
-}
-
-.step-icon {
-    width: clamp(60px, 10vw, 80px);
-    height: clamp(60px, 10vw, 80px);
-    background: rgba(234, 190, 63, 0.1);
-    color: var(--primary-color);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    margin: 0 auto 1rem;
-    transition: all 0.3s ease;
-    border: 2px solid rgba(234, 190, 63, 0.2);
-}
-
-.process-step:hover .step-icon {
-    background: var(--gradient-primary);
-    color: #000000;
-    transform: scale(1.1);
-    box-shadow: var(--shadow-medium);
-}
-
-/* Product cards responsivas */
-.product-card {
-    background: white;
-    border-radius: 15px;
-    padding: clamp(1rem, 2vw, 1.5rem);
-    transition: all 0.3s ease;
-    box-shadow: var(--shadow-black);
-    border: 1px solid rgba(234, 190, 63, 0.1);
-    height: 100%;
-}
-
-.product-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-soft), var(--shadow-black);
-    border-color: rgba(234, 190, 63, 0.25);
-}
-
-.product-img {
-    border-radius: 10px;
-    transition: all 0.3s ease;
-    height: clamp(150px, 30vw, 200px);
-    object-fit: cover;
-    width: 100%;
-}
-
-.product-card:hover .product-img {
-    transform: scale(1.05);
-}
-
-.product-price {
-    color: var(--primary-color);
-    font-size: clamp(1.25rem, 2.5vw, 1.5rem);
-    font-weight: 700;
-}
-
-.product-original-price {
-    color: #999;
-    text-decoration: line-through;
-    font-size: clamp(0.875rem, 1.5vw, 1rem);
-}
-
-.discount-badge {
-    background: var(--gradient-primary);
-    color: #000000;
-    padding: 0.25rem 0.75rem;
-    border-radius: 50px;
-    font-size: clamp(0.75rem, 1.5vw, 0.875rem);
-    font-weight: 600;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-}
-
-/* Filtros responsivos */
-.filter-btn {
-    background: transparent;
-    border: 2px solid rgba(234, 190, 63, 0.3);
-    color: var(--primary-color);
-    padding: clamp(0.375rem, 1vw, 0.5rem) clamp(1rem, 2vw, 1.5rem);
-    border-radius: 50px;
-    transition: all 0.3s ease;
-    font-weight: 500;
-    font-size: clamp(0.75rem, 1.5vw, 0.875rem);
-    margin: 0.25rem;
-}
-
-.filter-btn.active {
-    background: var(--gradient-primary);
-    border-color: var(--primary-color);
-    color: #000000;
-    box-shadow: var(--shadow-soft);
-}
-
-.filter-btn:not(.active):hover {
-    background: rgba(234, 190, 63, 0.1);
-    border-color: var(--primary-color);
-    transform: translateY(-1px);
-}
-
-/* Contact cards responsivas */
-.contact-card {
-    background: var(--gradient-subtle);
-    border-radius: 20px;
-    padding: clamp(1.5rem, 3vw, 2rem);
-    transition: all 0.3s ease;
-    box-shadow: var(--shadow-black);
-    border: 1px solid rgba(234, 190, 63, 0.1);
-    position: relative;
-    overflow: hidden;
-    height: 100%;
-}
-
-.contact-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: var(--gradient-primary);
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
-}
-
-.contact-card:hover::before {
-    transform: scaleX(1);
-}
-
-.contact-card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-soft), var(--shadow-black);
-    border-color: rgba(234, 190, 63, 0.25);
-}
-
-.contact-icon {
-    width: clamp(60px, 10vw, 80px);
-    height: clamp(60px, 10vw, 80px);
-    background: rgba(234, 190, 63, 0.1);
-    color: var(--primary-color);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    margin: 0 auto;
-    transition: all 0.3s ease;
-    border: 2px solid rgba(234, 190, 63, 0.2);
-    position: relative;
-    overflow: hidden;
-}
-
-.contact-icon::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: conic-gradient(transparent, rgba(234, 190, 63, 0.2), transparent);
-    animation: rotate 4s linear infinite;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.contact-card:hover .contact-icon::before {
-    opacity: 1;
-}
-
-.contact-card:hover .contact-icon {
-    background: var(--gradient-primary);
-    color: #000000;
-    transform: scale(1.1);
-    box-shadow: var(--shadow-medium);
-    border-color: var(--primary-color);
-}
-
-@keyframes rotate {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-/* Footer responsivo */
-footer {
-    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%) !important;
-    position: relative;
-    border-top: 1px solid rgba(234, 190, 63, 0.2);
-    padding: clamp(2rem, 5vw, 3rem) 0 clamp(1rem, 2vw, 1.5rem);
-}
-
-footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: var(--gradient-primary);
-}
-
-footer .text-muted {
-    color: #a0a0a0 !important;
-    font-size: clamp(0.875rem, 1.5vw, 1rem);
-}
-
-footer h5, footer h6 {
-    color: #ffffff !important;
-    font-size: clamp(1rem, 2vw, 1.25rem);
-}
-
-footer a.text-muted {
-    color: #a0a0a0 !important;
-    transition: all 0.3s ease;
-    font-size: clamp(0.875rem, 1.5vw, 1rem);
-}
-
-footer a.text-muted:hover {
-    color: var(--primary-color) !important;
-    transform: translateX(5px);
-}
-
-/* Social links responsivos */
-.social-link {
-    width: clamp(35px, 6vw, 40px);
-    height: clamp(35px, 6vw, 40px);
-    background: rgba(234, 190, 63, 0.1);
-    border: 2px solid rgba(234, 190, 63, 0.3);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-    text-decoration: none !important;
-    color: var(--primary-color) !important;
-    font-size: clamp(1rem, 2vw, 1.25rem);
-}
-
-.social-link:hover {
-    background: var(--primary-color);
-    border-color: var(--primary-color);
-    transform: translateY(-3px) scale(1.1);
-    color: #000000 !important;
-    box-shadow: var(--shadow-medium);
-}
-
-/* Modal responsivo */
-.modal-content {
-    border-radius: 20px;
-    border: 1px solid rgba(234, 190, 63, 0.2);
-    overflow: hidden;
-    box-shadow: var(--shadow-strong);
-    margin: 1rem;
-}
-
-.modal-header {
-    background: var(--gradient-primary);
-    border: none;
-    color: #000000;
-    padding: clamp(1rem, 2vw, 1.5rem);
-}
-
-.modal-body {
-    padding: clamp(1rem, 2vw, 1.5rem);
-}
-
-.modal-footer {
-    padding: clamp(1rem, 2vw, 1.5rem);
-}
-
-.modal-title {
-    font-size: clamp(1.125rem, 2vw, 1.25rem);
-}
-
-/* Hero logo responsivo */
-.hero-logo {
-    height: clamp(50px, 10vw, 80px);
-    width: auto;
-    filter: drop-shadow(0 10px 30px rgba(234, 190, 63, 0.2)) brightness(1.05);
-    animation: float 6s ease-in-out infinite;
-    transition: all 0.3s ease;
-}
-
-.hero-brand-logo:hover .hero-logo {
-    filter: drop-shadow(0 15px 40px rgba(234, 190, 63, 0.3)) brightness(1.1);
-    transform: scale(1.03);
-}
-
-.hero-brand-logo {
-    margin-bottom: clamp(1rem, 3vw, 2rem);
-    text-align: center;
-}
-
-/* Animaciones para notificaciones */
-@keyframes slideInRight {
-    from {
-        opacity: 0;
-        transform: translateX(100%);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes slideOutRight {
-    from {
-        opacity: 1;
-        transform: translateX(0);
-    }
-    to {
-        opacity: 0;
-        transform: translateX(100%);
-    }
-}
-
-/* Notificaciones responsivas */
-.notification-custom {
-    backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, 0.95) !important;
-    border-left: 4px solid var(--primary-color) !important;
-    min-width: clamp(250px, 50vw, 300px);
-    max-width: clamp(300px, 60vw, 400px);
-    right: clamp(10px, 2vw, 20px) !important;
-    top: clamp(80px, 15vw, 100px) !important;
-}
-
-.notification-custom.alert-success {
-    border-left-color: var(--success-color) !important;
-}
-
-.notification-custom.alert-warning {
-    border-left-color: var(--warning-color) !important;
-}
-
-.notification-custom.alert-danger {
-    border-left-color: var(--danger-color) !important;
-}
-
-/* Grid responsivo mejorado */
-.row {
-    margin-left: -0.75rem;
-    margin-right: -0.75rem;
-}
-
-.row > * {
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-}
-
-/* Espaciado responsivo */
-.py-5 {
-    padding-top: clamp(2rem, 5vw, 3rem) !important;
-    padding-bottom: clamp(2rem, 5vw, 3rem) !important;
-}
-
-.mb-4 {
-    margin-bottom: clamp(1rem, 2vw, 1.5rem) !important;
-}
-
-.mb-5 {
-    margin-bottom: clamp(1.5rem, 3vw, 3rem) !important;
-}
-
-/* Responsive específico para tablets */
-@media (min-width: 768px) and (max-width: 991.98px) {
-    .hero-section {
-        padding: 100px 0 60px;
-    }
-    
-    .container {
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-    
-    .service-main-card {
-        margin-bottom: 2rem;
-    }
-    
-    .contact-card {
-        margin-bottom: 2rem;
-    }
-}
-
-/* Responsive específico para móviles grandes */
-@media (min-width: 576px) and (max-width: 767.98px) {
-    .hero-section {
-        padding: 90px 0 50px;
-        text-align: center;
-    }
-    
-    .hero-image {
-        margin-top: 3rem;
-    }
-    
-    .floating-card {
-        position: relative;
-        bottom: auto;
-        right: auto;
-        margin-top: 1rem;
-        max-width: 100%;
-    }
-    
-    .d-flex.gap-3 {
-        justify-content: center;
-    }
-}
-
-/* Responsive específico para móviles pequeños */
-@media (max-width: 575.98px) {
-    .hero-section {
-        padding: 80px 0 40px;
-        text-align: center;
-    }
-    
-    .hero-image {
-        margin-top: 2rem;
-    }
-    
-    .floating-card {
-        position: relative;
-        bottom: auto;
-        right: auto;
-        margin-top: 1rem;
-        max-width: 100%;
-    }
-    
-    .d-flex.gap-3 {
-        justify-content: center;
-    }
-    
-    .filter-btn {
-        flex: 1;
-        min-width: 120px;
-    }
-    
-    .d-flex.flex-wrap.gap-2.justify-content-center {
-        gap: 0.5rem !important;
-    }
-    
-    .modal-dialog {
-        margin: 0.5rem;
-    }
-    
-    .navbar-nav {
-        text-align: center;
-        padding: 1rem 0;
-    }
-    
-    .dropdown-menu {
-        text-align: center;
-    }
-}
-
-/* Micro ajustes para dispositivos muy pequeños */
-@media (max-width: 375px) {
-    .container {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-    
-    .hero-stats {
-        padding: 1rem;
-    }
-    
-    .service-main-card,
-    .contact-card {
-        padding: 1.25rem;
-    }
-    
-    .btn-primary,
-    .btn-outline-primary {
-        padding: 8px 16px;
-        font-size: 0.875rem;
-    }
-}
-
-/* Utilidades responsivas */
-.text-primary {
-    color: var(--primary-color) !important;
-}
-
-.bg-primary {
-    background: var(--gradient-primary) !important;
-}
-
-.border-primary {
-    border-color: var(--primary-color) !important;
-}
-
-.shadow-soft {
-    box-shadow: var(--shadow-soft) !important;
-}
-
-.shadow-medium {
-    box-shadow: var(--shadow-medium) !important;
-}
-
-/* Smooth transitions para cambios de viewport */
-* {
-    transition: font-size 0.3s ease, padding 0.3s ease, margin 0.3s ease;
-}
-
-/* Prevenir zoom en inputs en iOS */
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-    select,
-    textarea,
-    input[type="text"],
-    input[type="password"],
-    input[type="datetime"],
-    input[type="datetime-local"],
-    input[type="date"],
-    input[type="month"],
-    input[type="time"],
-    input[type="week"],
-    input[type="number"],
-    input[type="email"],
-    input[type="url"],
-    input[type="search"],
-    input[type="tel"],
-    input[type="color"] {
-        font-size: 16px;
-    }
-}
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary d-flex align-items-center" href="#">
+                <img src="logos/Recurso 3.png" alt="Marquesa GT Logo" class="navbar-logo me-2">
+                Marquesa GT
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto me-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Nuestros Servicios
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#servicios" data-category="diagnostico">
+                                <i class="bi bi-search me-2"></i>Diagnóstico de Marca
+                            </a></li>
+                            <li><a class="dropdown-item" href="#servicios" data-category="transformacion">
+                                <i class="bi bi-arrow-repeat me-2"></i>Transformación de Imagen Corporativa
+                            </a></li>
+                            <li><a class="dropdown-item" href="#servicios" data-category="sistemas">
+                                <i class="bi bi-grid-3x3-gap-fill me-2"></i>Sistemas Gráficos Completos
+                            </a></li>
+                            <li><a class="dropdown-item" href="#servicios" data-category="branding">
+                                <i class="bi bi-lightbulb-fill me-2"></i>Soluciones de Branding
+                            </a></li>
+                            <li><a class="dropdown-item" href="#servicios" data-category="campanas">
+                                <i class="bi bi-megaphone-fill me-2"></i>Campañas de Lanzamiento/Relanzamiento
+                            </a></li>
+                            <li><a class="dropdown-item" href="#servicios" data-category="asesoria">
+                                <i class="bi bi-people-fill me-2"></i>Asesoría en Posicionamiento y Reputación
+                            </a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#servicios" data-category="all">
+                                <i class="bi bi-grid-fill me-2"></i>Ver Todos los Servicios
+                            </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#nosotros">Acerca de Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#proceso">Nuestro Proceso</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+                
+                <!-- Carrito de Servicios -->
+                <button class="btn btn-outline-primary position-relative" data-bs-toggle="modal" data-bs-target="#carritoModal">
+                    <i class="bi bi-briefcase"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cart-count">
+                        0
+                    </span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6">
+                    <div class="hero-brand-logo mb-4">
+                        <img src="logos/Recurso 3.png" alt="Marquesa GT" class="hero-logo">
+                    </div>
+                    <h1 class="display-3 fw-bold mb-4 text-gradient">
+                        Transformamos Marcas, <span class="text-primary">Potenciamos Negocios</span>
+                    </h1>
+                    <p class="lead mb-4 text-muted">
+                        Somos tu socio estratégico con soluciones creativas e innovadoras. Fortalecemos la identidad de marca y potenciamos la presencia y visibilidad de nuestros clientes a través de la excelencia visual.
+                    </p>
+                    <div class="hero-stats mb-4">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="stat-item text-center">
+                                    <h3 class="fw-bold text-primary mb-0">50+</h3>
+                                    <small class="text-muted">Proyectos Exitosos</small>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="stat-item text-center">
+                                    <h3 class="fw-bold text-primary mb-0">100%</h3>
+                                    <small class="text-muted">Dedicación</small>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="stat-item text-center">
+                                    <h3 class="fw-bold text-primary mb-0">100%</h3>
+                                    <small class="text-muted">Satisfacción</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="#servicios" class="btn btn-primary btn-lg">
+                            <i class="bi bi-rocket-takeoff me-2"></i>Explorar Servicios
+                        </a>
+                        <a href="#contacto" class="btn btn-outline-primary btn-lg">
+                            <i class="bi bi-whatsapp me-2"></i>Consulta Gratuita
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image position-relative">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Servicios de branding profesional" class="img-fluid rounded-4 shadow-lg">
+                        <div class="floating-card">
+                            <div class="card border-0 shadow-lg">
+                                <div class="card-body p-3">
+                                    <div class="d-flex align-items-center">
+                                        <div class="icon-box bg-primary text-white rounded-circle me-3">
+                                            <i class="bi bi-trophy-fill"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="mb-0 fw-bold">Excelencia Visual</h6>
+                                            <small class="text-muted">Transformamos tu marca</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios Principales -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-12">
+                    <h2 class="display-5 fw-bold mb-3">Nuestros Servicios</h2>
+                    <p class="lead text-muted">Soluciones integrales para cada etapa de tu marca</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-main-card h-100" data-category="diagnostico">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon mb-4">
+                                <i class="bi bi-search"></i>
+                            </div>
+                            <h4 class="card-title mb-3">Diagnóstico de Marca</h4>
+                            <p class="card-text text-muted mb-4">
+                                Análisis profundo de tu marca actual para identificar oportunidades de mejora y crecimiento.
+                            </p>
+                            <ul class="list-unstyled text-start mb-4">
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Auditoría completa de marca</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Análisis de competencia</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Investigación de mercado</li>
+                            </ul>
+                            <a href="#servicios" class="btn btn-outline-primary" data-category="diagnostico">Ver Detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-main-card h-100" data-category="transformacion">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon mb-4">
+                                <i class="bi bi-arrow-repeat"></i>
+                            </div>
+                            <h4 class="card-title mb-3">Transformación de Imagen</h4>
+                            <p class="card-text text-muted mb-4">
+                                Renovamos tu identidad visual para impactar y conectar con tu audiencia objetivo.
+                            </p>
+                            <ul class="list-unstyled text-start mb-4">
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Rediseño de logo</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Nueva paleta de colores</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Manual de marca</li>
+                            </ul>
+                            <a href="#servicios" class="btn btn-outline-primary" data-category="transformacion">Ver Detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-main-card h-100" data-category="sistemas">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon mb-4">
+                                <i class="bi bi-grid-3x3-gap-fill"></i>
+                            </div>
+                            <h4 class="card-title mb-3">Sistemas Gráficos</h4>
+                            <p class="card-text text-muted mb-4">
+                                Desarrollamos sistemas visuales coherentes para todas tus comunicaciones.
+                            </p>
+                            <ul class="list-unstyled text-start mb-4">
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Papelería corporativa</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Material publicitario</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Aplicaciones digitales</li>
+                            </ul>
+                            <a href="#servicios" class="btn btn-outline-primary" data-category="sistemas">Ver Detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-main-card h-100" data-category="branding">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon mb-4">
+                                <i class="bi bi-lightbulb-fill"></i>
+                            </div>
+                            <h4 class="card-title mb-3">Soluciones de Branding</h4>
+                            <p class="card-text text-muted mb-4">
+                                Estrategias integrales que definen la personalidad única de tu marca.
+                            </p>
+                            <ul class="list-unstyled text-start mb-4">
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Estrategia de marca</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Naming creativo</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Posicionamiento</li>
+                            </ul>
+                            <a href="#servicios" class="btn btn-outline-primary" data-category="branding">Ver Detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-main-card h-100" data-category="campanas">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon mb-4">
+                                <i class="bi bi-megaphone-fill"></i>
+                            </div>
+                            <h4 class="card-title mb-3">Campañas Publicitarias</h4>
+                            <p class="card-text text-muted mb-4">
+                                Lanzamientos y relanzamientos que generan impacto y resultados medibles.
+                            </p>
+                            <ul class="list-unstyled text-start mb-4">
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Campañas 360°</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Estrategia de comunicación</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Medición de resultados</li>
+                            </ul>
+                            <a href="#servicios" class="btn btn-outline-primary" data-category="campanas">Ver Detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-main-card h-100" data-category="asesoria">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon mb-4">
+                                <i class="bi bi-people-fill"></i>
+                            </div>
+                            <h4 class="card-title mb-3">Asesoría y Consultoría</h4>
+                            <p class="card-text text-muted mb-4">
+                                Acompañamiento estratégico para fortalecer tu posición en el mercado.
+                            </p>
+                            <ul class="list-unstyled text-start mb-4">
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Consultoría estratégica</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Gestión de reputación</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Seguimiento continuo</li>
+                            </ul>
+                            <a href="#servicios" class="btn btn-outline-primary" data-category="asesoria">Ver Detalles</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nuestro Proceso -->
+    <section id="proceso" class="py-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="display-5 fw-bold mb-3">Nuestro Proceso</h2>
+                    <p class="lead text-muted">Metodología probada para resultados excepcionales</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-step text-center">
+                        <div class="step-number">01</div>
+                        <div class="step-icon mb-3">
+                            <i class="bi bi-chat-dots-fill"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Consulta Inicial</h5>
+                        <p class="text-muted">Entendemos tus necesidades, objetivos y visión para crear la estrategia perfecta.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-step text-center">
+                        <div class="step-number">02</div>
+                        <div class="step-icon mb-3">
+                            <i class="bi bi-search"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Análisis Profundo</h5>
+                        <p class="text-muted">Investigamos tu mercado, competencia y audiencia para identificar oportunidades únicas.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-step text-center">
+                        <div class="step-number">03</div>
+                        <div class="step-icon mb-3">
+                            <i class="bi bi-lightbulb-fill"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Estrategia Creativa</h5>
+                        <p class="text-muted">Desarrollamos conceptos innovadores y estrategias personalizadas para tu marca.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-step text-center">
+                        <div class="step-number">04</div>
+                        <div class="step-icon mb-3">
+                            <i class="bi bi-rocket-takeoff-fill"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Implementación</h5>
+                        <p class="text-muted">Ejecutamos la estrategia con precisión y monitoreamos los resultados continuamente.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios Detallados -->
+    <section id="servicios" class="py-5 bg-light">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="display-5 fw-bold mb-3">Servicios Detallados</h2>
+                    <p class="lead text-muted">Explora todos nuestros servicios especializados</p>
+                </div>
+            </div>
+            
+            <!-- Filtros -->
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="d-flex flex-wrap gap-2 justify-content-center">
+                        <button class="btn btn-primary filter-btn active" data-filter="all">Todos</button>
+                        <button class="btn btn-outline-primary filter-btn" data-filter="diagnostico">Diagnóstico</button>
+                        <button class="btn btn-outline-primary filter-btn" data-filter="transformacion">Transformación</button>
+                        <button class="btn btn-outline-primary filter-btn" data-filter="sistemas">Sistemas Gráficos</button>
+                        <button class="btn btn-outline-primary filter-btn" data-filter="branding">Branding</button>
+                        <button class="btn btn-outline-primary filter-btn" data-filter="campanas">Campañas</button>
+                        <button class="btn btn-outline-primary filter-btn" data-filter="asesoria">Asesoría</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grid de Servicios -->
+            <div class="row g-4" id="servicios-grid">
+                <!-- Los servicios se cargarán dinámicamente con JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Acerca de Nosotros -->
+    <section id="nosotros" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Equipo Marquesa GT" class="img-fluid rounded-4 shadow-lg">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="display-5 fw-bold mb-4">Acerca de Marquesa GT</h2>
+                    <div class="mb-4">
+                        <h4 class="text-primary fw-bold mb-2">MISIÓN</h4>
+                        <p class="mb-4">
+                            Somos un socio estratégico con soluciones creativas e innovadoras, fortalecemos la identidad de marca y potenciamos la presencia y visibilidad de nuestros clientes.
+                        </p>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h4 class="text-primary fw-bold mb-2">VISIÓN</h4>
+                        <p class="mb-4">
+                            Ser reconocidos por nuestra excelencia visual y capacidad de reinventar marcas, siendo aliados clave en el crecimiento de nuestros clientes.
+                        </p>
+                    </div>
+
+                    <div class="mb-4">
+                        <h4 class="text-primary fw-bold mb-2">VALORES</h4>
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-eye-fill text-primary me-3" style="font-size: 1.5rem;"></i>
+                                    <span><strong>Transparencia</strong></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-arrow-repeat text-primary me-3" style="font-size: 1.5rem;"></i>
+                                    <span><strong>Adaptabilidad</strong></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-lightbulb-fill text-primary me-3" style="font-size: 1.5rem;"></i>
+                                    <span><strong>Transformación estratégica</strong></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-award-fill text-primary me-3" style="font-size: 1.5rem;"></i>
+                                    <span><strong>Excelencia visual</strong></span>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-people-fill text-primary me-3" style="font-size: 1.5rem;"></i>
+                                    <span><strong>Colaboración creativa</strong></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#contacto" class="btn btn-primary btn-lg">
+                        <i class="bi bi-whatsapp me-2"></i>Contactar Ahora
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="py-5 bg-light">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="display-5 fw-bold mb-3">¿Listo para Transformar tu Marca?</h2>
+                    <p class="lead text-muted">Contáctanos para una consulta gratuita y descubre cómo podemos impulsar tu negocio</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="contact-card text-center h-100">
+                        <div class="contact-icon mb-3">
+                            <i class="bi bi-whatsapp"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">WhatsApp</h5>
+                        <p class="text-muted mb-3">Chatea con nosotros directamente</p>
+                        <a href="https://wa.me/50257687221" target="_blank" class="btn btn-success">
+                            <i class="bi bi-whatsapp me-2"></i>5768-7221
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="contact-card text-center h-100">
+                        <div class="contact-icon mb-3">
+                            <i class="bi bi-instagram"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Instagram</h5>
+                        <p class="text-muted mb-3">Síguenos para ver nuestros últimos proyectos</p>
+                        <a href="https://instagram.com/Marquesa.gt" target="_blank" class="btn btn-primary">
+                            <i class="bi bi-instagram me-2"></i>@Marquesa.gt
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="contact-card text-center h-100">
+                        <div class="contact-icon mb-3">
+                            <i class="bi bi-envelope-fill"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Email</h5>
+                        <p class="text-muted mb-3">Envíanos tu consulta por correo</p>
+                        <a href="mailto:info@marquesagt.com" class="btn btn-outline-primary">
+                            <i class="bi bi-envelope me-2"></i>info@marquesagt.com
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3 d-flex align-items-center">
+                        <img src="logos/Recurso 3.png" alt="Marquesa GT Logo" class="footer-logo me-2">
+                        Marquesa GT
+                    </h5>
+                    <p class="text-muted mb-4">
+                        Transformamos marcas, potenciamos negocios. Tu éxito es nuestra pasión.
+                    </p>
+                    <div class="d-flex gap-3">
+                        <a href="https://instagram.com/Marquesa.gt" target="_blank" class="text-light social-link" title="Síguenos en Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/50257687221" target="_blank" class="text-light social-link" title="Contáctanos por WhatsApp">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+                        <a href="mailto:info@marquesagt.com" class="text-light social-link" title="Envíanos un email">
+                            <i class="bi bi-envelope-fill"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <h6 class="fw-bold mb-3">Enlaces</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#inicio" class="text-muted text-decoration-none footer-link">Inicio</a></li>
+                        <li><a href="#servicios" class="text-muted text-decoration-none footer-link">Servicios</a></li>
+                        <li><a href="#nosotros" class="text-muted text-decoration-none footer-link">Nosotros</a></li>
+                        <li><a href="#proceso" class="text-muted text-decoration-none footer-link">Proceso</a></li>
+                        <li><a href="#contacto" class="text-muted text-decoration-none footer-link">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h6 class="fw-bold mb-3">Servicios</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#servicios" class="text-muted text-decoration-none footer-link" data-category="diagnostico">Diagnóstico de Marca</a></li>
+                        <li><a href="#servicios" class="text-muted text-decoration-none footer-link" data-category="transformacion">Transformación de Imagen</a></li>
+                        <li><a href="#servicios" class="text-muted text-decoration-none footer-link" data-category="sistemas">Sistemas Gráficos</a></li>
+                        <li><a href="#servicios" class="text-muted text-decoration-none footer-link" data-category="branding">Soluciones de Branding</a></li>
+                        <li><a href="#servicios" class="text-muted text-decoration-none footer-link" data-category="campanas">Campañas Publicitarias</a></li>
+                        <li><a href="#servicios" class="text-muted text-decoration-none footer-link" data-category="asesoria">Asesoría y Consultoría</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h6 class="fw-bold mb-3">Contacto</h6>
+                    <ul class="list-unstyled text-muted">
+                        <li class="mb-2">
+                            <i class="bi bi-whatsapp me-2"></i>
+                            <a href="https://wa.me/50257687221" class="text-muted text-decoration-none">5768-7221</a>
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-instagram me-2"></i>
+                            <a href="https://instagram.com/Marquesa.gt" class="text-muted text-decoration-none">@Marquesa.gt</a>
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-envelope me-2"></i>
+                            <a href="mailto:info@marquesagt.com" class="text-muted text-decoration-none">info@marquesagt.com</a>
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-geo-alt me-2"></i>Guatemala
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="text-muted mb-0">&copy; 2025 Marquesa GT. Todos los derechos reservados. | Diseñado con ❤️ para tu éxito</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal del Carrito de Servicios -->
+    <div class="modal fade" id="carritoModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content border-0 shadow-lg">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title fw-bold">
+                        <i class="bi bi-briefcase me-2"></i>Servicios Seleccionados
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="cart-items">
+                        <div class="text-center py-5 text-muted">
+                            <i class="bi bi-briefcase-fill" style="font-size: 3rem;"></i>
+                            <p class="mt-3 mb-0">No has seleccionado ningún servicio</p>
+                            <small>Explora nuestros servicios y agrégalos aquí</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer bg-light">
+                    <div class="w-100">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <strong class="h5 mb-0">Total: $<span id="cart-total">0.00</span></strong>
+                        </div>
+                        <div class="d-grid">
+                            <button class="btn btn-success btn-lg" id="checkout-btn" disabled>
+                                <i class="bi bi-whatsapp me-2"></i>Solicitar Cotización por WhatsApp
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="UI.js"></script>
+</body>
+</html>
