@@ -3,12 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Belleza & Hogar - Tu tienda de belleza y cuidado personal</title>
+    <title>Marquesa GT - Transformamos Marcas, Potenciamos Negocios</title>
+    
+    <!-- Preload del logo para mejor rendimiento -->
+    <link rel="preload" href="logos/Recurso 3.png" as="image" type="image/png">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="logos/Recurso 3.png" type="image/png">
+    <link rel="apple-touch-icon" href="logos/Recurso 3.png">
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -16,8 +25,9 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white shadow-sm">
         <div class="container">
-            <a class="navbar-brand fw-bold text-primary" href="#">
-                <i class="bi bi-gem me-2"></i>Belleza & Hogar
+            <a class="navbar-brand fw-bold text-primary d-flex align-items-center" href="#">
+                <img src="logos/Recurso 3.png" alt="Marquesa GT Logo" class="navbar-logo me-2">
+                Marquesa GT
             </a>
             
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -31,32 +41,47 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                            Productos
+                            Nuestros Servicios
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#productos" data-category="skincare">
-                                <i class="bi bi-heart-fill me-2"></i>Cuidado de la Piel
+                            <li><a class="dropdown-item" href="#servicios" data-category="diagnostico">
+                                <i class="bi bi-search me-2"></i>Diagnóstico de Marca
                             </a></li>
-                            <li><a class="dropdown-item" href="#productos" data-category="makeup">
-                                <i class="bi bi-palette-fill me-2"></i>Maquillaje
+                            <li><a class="dropdown-item" href="#servicios" data-category="transformacion">
+                                <i class="bi bi-arrow-repeat me-2"></i>Transformación de Imagen Corporativa
                             </a></li>
-                            <li><a class="dropdown-item" href="#productos" data-category="home">
-                                <i class="bi bi-house-fill me-2"></i>Hogar
+                            <li><a class="dropdown-item" href="#servicios" data-category="sistemas">
+                                <i class="bi bi-grid-3x3-gap-fill me-2"></i>Sistemas Gráficos Completos
+                            </a></li>
+                            <li><a class="dropdown-item" href="#servicios" data-category="branding">
+                                <i class="bi bi-lightbulb-fill me-2"></i>Soluciones de Branding
+                            </a></li>
+                            <li><a class="dropdown-item" href="#servicios" data-category="campanas">
+                                <i class="bi bi-megaphone-fill me-2"></i>Campañas de Lanzamiento/Relanzamiento
+                            </a></li>
+                            <li><a class="dropdown-item" href="#servicios" data-category="asesoria">
+                                <i class="bi bi-people-fill me-2"></i>Asesoría en Posicionamiento y Reputación
                             </a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#productos" data-category="all">
-                                <i class="bi bi-grid-fill me-2"></i>Ver Todos
+                            <li><a class="dropdown-item" href="#servicios" data-category="all">
+                                <i class="bi bi-grid-fill me-2"></i>Ver Todos los Servicios
                             </a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#nosotros">Acerca de Nosotros</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#proceso">Nuestro Proceso</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
                 </ul>
                 
-                <!-- Carrito de Compras -->
+                <!-- Carrito de Servicios -->
                 <button class="btn btn-outline-primary position-relative" data-bs-toggle="modal" data-bs-target="#carritoModal">
-                    <i class="bi bi-cart3"></i>
+                    <i class="bi bi-briefcase"></i>
                     <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cart-count">
                         0
                     </span>
@@ -70,74 +95,192 @@
         <div class="container">
             <div class="row align-items-center min-vh-100">
                 <div class="col-lg-6">
-                    <h1 class="display-4 fw-bold mb-4">
-                        Descubre tu <span class="text-primary">belleza natural</span>
+                    <div class="hero-brand-logo mb-4">
+                        <img src="logos/Recurso 3.png" alt="Marquesa GT" class="hero-logo">
+                    </div>
+                    <h1 class="display-3 fw-bold mb-4 text-gradient">
+                        Transformamos Marcas, <span class="text-primary">Potenciamos Negocios</span>
                     </h1>
-                    <p class="lead mb-4">
-                        Productos de calidad para el cuidado de tu piel, maquillaje profesional y artículos para hacer de tu hogar un lugar más hermoso.
+                    <p class="lead mb-4 text-muted">
+                        En Marquesa GT creamos estrategias integrales de comunicación que impulsan el crecimiento de tu empresa. Desde el diagnóstico hasta la implementación, transformamos tu visión en resultados tangibles.
                     </p>
-                    <div class="d-flex gap-3">
-                        <a href="#productos" class="btn btn-primary btn-lg">
-                            <i class="bi bi-shop me-2"></i>Ver Productos
+                    <div class="hero-stats mb-4">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="stat-item text-center">
+                                    <h3 class="fw-bold text-primary mb-0">50+</h3>
+                                    <small class="text-muted">Proyectos Exitosos</small>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="stat-item text-center">
+                                    <h3 class="fw-bold text-primary mb-0">5+</h3>
+                                    <small class="text-muted">Años de Experiencia</small>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="stat-item text-center">
+                                    <h3 class="fw-bold text-primary mb-0">100%</h3>
+                                    <small class="text-muted">Satisfacción</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="#servicios" class="btn btn-primary btn-lg">
+                            <i class="bi bi-rocket-takeoff me-2"></i>Explorar Servicios
                         </a>
-                        <a href="#nosotros" class="btn btn-outline-primary btn-lg">
-                            Conoce más
+                        <a href="#contacto" class="btn btn-outline-primary btn-lg">
+                            <i class="bi bi-whatsapp me-2"></i>Consulta Gratuita
                         </a>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="hero-image">
-                        <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="Productos de belleza" class="img-fluid rounded-3 shadow">
+                    <div class="hero-image position-relative">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Servicios de branding profesional" class="img-fluid rounded-4 shadow-lg">
+                        <div class="floating-card">
+                            <div class="card border-0 shadow-lg">
+                                <div class="card-body p-3">
+                                    <div class="d-flex align-items-center">
+                                        <div class="icon-box bg-primary text-white rounded-circle me-3">
+                                            <i class="bi bi-trophy-fill"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="mb-0 fw-bold">Resultados Comprobados</h6>
+                                            <small class="text-muted">Estrategias que funcionan</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Categorías Destacadas -->
+    <!-- Servicios Principales -->
     <section class="py-5 bg-light">
         <div class="container">
             <div class="row text-center mb-5">
                 <div class="col-12">
-                    <h2 class="display-5 fw-bold">Nuestras Categorías</h2>
-                    <p class="lead text-muted">Explora nuestra selección de productos</p>
+                    <h2 class="display-5 fw-bold mb-3">Nuestros Servicios</h2>
+                    <p class="lead text-muted">Soluciones integrales para cada etapa de tu marca</p>
                 </div>
             </div>
             <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm category-card" data-category="skincare">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-main-card h-100" data-category="diagnostico">
                         <div class="card-body text-center p-4">
-                            <div class="category-icon mb-3">
-                                <i class="bi bi-heart-fill text-primary" style="font-size: 3rem;"></i>
+                            <div class="service-icon mb-4">
+                                <i class="bi bi-search"></i>
                             </div>
-                            <h5 class="card-title">Cuidado de la Piel</h5>
-                            <p class="card-text text-muted">Cremas, serums, limpiadores y todo lo que necesitas para una piel radiante.</p>
-                            <a href="#productos" class="btn btn-outline-primary" data-category="skincare">Ver Productos</a>
+                            <h4 class="card-title mb-3">Diagnóstico de Marca</h4>
+                            <p class="card-text text-muted mb-4">
+                                Análisis profundo de tu marca actual para identificar oportunidades de mejora y crecimiento.
+                            </p>
+                            <ul class="list-unstyled text-start mb-4">
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Auditoría completa de marca</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Análisis de competencia</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Investigación de mercado</li>
+                            </ul>
+                            <a href="#servicios" class="btn btn-outline-primary" data-category="diagnostico">Ver Detalles</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm category-card" data-category="makeup">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-main-card h-100" data-category="transformacion">
                         <div class="card-body text-center p-4">
-                            <div class="category-icon mb-3">
-                                <i class="bi bi-palette-fill text-primary" style="font-size: 3rem;"></i>
+                            <div class="service-icon mb-4">
+                                <i class="bi bi-arrow-repeat"></i>
                             </div>
-                            <h5 class="card-title">Maquillaje</h5>
-                            <p class="card-text text-muted">Bases, labiales, sombras y todo para resaltar tu belleza natural.</p>
-                            <a href="#productos" class="btn btn-outline-primary" data-category="makeup">Ver Productos</a>
+                            <h4 class="card-title mb-3">Transformación de Imagen</h4>
+                            <p class="card-text text-muted mb-4">
+                                Renovamos tu identidad visual para impactar y conectar con tu audiencia objetivo.
+                            </p>
+                            <ul class="list-unstyled text-start mb-4">
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Rediseño de logo</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Nueva paleta de colores</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Manual de marca</li>
+                            </ul>
+                            <a href="#servicios" class="btn btn-outline-primary" data-category="transformacion">Ver Detalles</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm category-card" data-category="home">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-main-card h-100" data-category="sistemas">
                         <div class="card-body text-center p-4">
-                            <div class="category-icon mb-3">
-                                <i class="bi bi-house-fill text-primary" style="font-size: 3rem;"></i>
+                            <div class="service-icon mb-4">
+                                <i class="bi bi-grid-3x3-gap-fill"></i>
                             </div>
-                            <h5 class="card-title">Hogar</h5>
-                            <p class="card-text text-muted">Velas, difusores, decoración y artículos para embellecer tu hogar.</p>
-                            <a href="#productos" class="btn btn-outline-primary" data-category="home">Ver Productos</a>
+                            <h4 class="card-title mb-3">Sistemas Gráficos</h4>
+                            <p class="card-text text-muted mb-4">
+                                Desarrollamos sistemas visuales coherentes para todas tus comunicaciones.
+                            </p>
+                            <ul class="list-unstyled text-start mb-4">
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Papelería corporativa</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Material publicitario</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Aplicaciones digitales</li>
+                            </ul>
+                            <a href="#servicios" class="btn btn-outline-primary" data-category="sistemas">Ver Detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-main-card h-100" data-category="branding">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon mb-4">
+                                <i class="bi bi-lightbulb-fill"></i>
+                            </div>
+                            <h4 class="card-title mb-3">Soluciones de Branding</h4>
+                            <p class="card-text text-muted mb-4">
+                                Estrategias integrales que definen la personalidad única de tu marca.
+                            </p>
+                            <ul class="list-unstyled text-start mb-4">
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Estrategia de marca</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Naming creativo</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Posicionamiento</li>
+                            </ul>
+                            <a href="#servicios" class="btn btn-outline-primary" data-category="branding">Ver Detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-main-card h-100" data-category="campanas">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon mb-4">
+                                <i class="bi bi-megaphone-fill"></i>
+                            </div>
+                            <h4 class="card-title mb-3">Campañas Publicitarias</h4>
+                            <p class="card-text text-muted mb-4">
+                                Lanzamientos y relanzamientos que generan impacto y resultados medibles.
+                            </p>
+                            <ul class="list-unstyled text-start mb-4">
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Campañas 360°</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Estrategia de comunicación</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Medición de resultados</li>
+                            </ul>
+                            <a href="#servicios" class="btn btn-outline-primary" data-category="campanas">Ver Detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-main-card h-100" data-category="asesoria">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon mb-4">
+                                <i class="bi bi-people-fill"></i>
+                            </div>
+                            <h4 class="card-title mb-3">Asesoría y Consultoría</h4>
+                            <p class="card-text text-muted mb-4">
+                                Acompañamiento estratégico para fortalecer tu posición en el mercado.
+                            </p>
+                            <ul class="list-unstyled text-start mb-4">
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Consultoría estratégica</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Gestión de reputación</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Seguimiento continuo</li>
+                            </ul>
+                            <a href="#servicios" class="btn btn-outline-primary" data-category="asesoria">Ver Detalles</a>
                         </div>
                     </div>
                 </div>
@@ -145,13 +288,67 @@
         </div>
     </section>
 
-    <!-- Productos -->
-    <section id="productos" class="py-5">
+    <!-- Nuestro Proceso -->
+    <section id="proceso" class="py-5">
         <div class="container">
             <div class="row mb-5">
                 <div class="col-12 text-center">
-                    <h2 class="display-5 fw-bold">Nuestros Productos</h2>
-                    <p class="lead text-muted">Descubre nuestra selección cuidadosamente elegida</p>
+                    <h2 class="display-5 fw-bold mb-3">Nuestro Proceso</h2>
+                    <p class="lead text-muted">Metodología probada para resultados excepcionales</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-step text-center">
+                        <div class="step-number">01</div>
+                        <div class="step-icon mb-3">
+                            <i class="bi bi-chat-dots-fill"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Consulta Inicial</h5>
+                        <p class="text-muted">Entendemos tus necesidades, objetivos y visión para crear la estrategia perfecta.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-step text-center">
+                        <div class="step-number">02</div>
+                        <div class="step-icon mb-3">
+                            <i class="bi bi-search"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Análisis Profundo</h5>
+                        <p class="text-muted">Investigamos tu mercado, competencia y audiencia para identificar oportunidades únicas.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-step text-center">
+                        <div class="step-number">03</div>
+                        <div class="step-icon mb-3">
+                            <i class="bi bi-lightbulb-fill"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Estrategia Creativa</h5>
+                        <p class="text-muted">Desarrollamos conceptos innovadores y estrategias personalizadas para tu marca.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-step text-center">
+                        <div class="step-number">04</div>
+                        <div class="step-icon mb-3">
+                            <i class="bi bi-rocket-takeoff-fill"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Implementación</h5>
+                        <p class="text-muted">Ejecutamos la estrategia con precisión y monitoreamos los resultados continuamente.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios Detallados -->
+    <section id="servicios" class="py-5 bg-light">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="display-5 fw-bold mb-3">Servicios Detallados</h2>
+                    <p class="lead text-muted">Explora todos nuestros servicios especializados</p>
                 </div>
             </div>
             
@@ -160,61 +357,117 @@
                 <div class="col-12">
                     <div class="d-flex flex-wrap gap-2 justify-content-center">
                         <button class="btn btn-primary filter-btn active" data-filter="all">Todos</button>
-                        <button class="btn btn-outline-primary filter-btn" data-filter="skincare">Cuidado de la Piel</button>
-                        <button class="btn btn-outline-primary filter-btn" data-filter="makeup">Maquillaje</button>
-                        <button class="btn btn-outline-primary filter-btn" data-filter="home">Hogar</button>
+                        <button class="btn btn-outline-primary filter-btn" data-filter="diagnostico">Diagnóstico</button>
+                        <button class="btn btn-outline-primary filter-btn" data-filter="transformacion">Transformación</button>
+                        <button class="btn btn-outline-primary filter-btn" data-filter="sistemas">Sistemas Gráficos</button>
+                        <button class="btn btn-outline-primary filter-btn" data-filter="branding">Branding</button>
+                        <button class="btn btn-outline-primary filter-btn" data-filter="campanas">Campañas</button>
+                        <button class="btn btn-outline-primary filter-btn" data-filter="asesoria">Asesoría</button>
                     </div>
                 </div>
             </div>
 
-            <!-- Grid de Productos -->
-            <div class="row g-4" id="productos-grid">
-                <!-- Los productos se cargarán dinámicamente con JavaScript -->
+            <!-- Grid de Servicios -->
+            <div class="row g-4" id="servicios-grid">
+                <!-- Los servicios se cargarán dinámicamente con JavaScript -->
             </div>
         </div>
     </section>
 
     <!-- Acerca de Nosotros -->
-    <section id="nosotros" class="py-5 bg-light">
+    <section id="nosotros" class="py-5">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                         alt="Nuestra historia" class="img-fluid rounded-3 shadow">
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Equipo Marquesa GT" class="img-fluid rounded-4 shadow-lg">
                 </div>
                 <div class="col-lg-6">
-                    <h2 class="display-5 fw-bold mb-4">Acerca de Nosotros</h2>
+                    <h2 class="display-5 fw-bold mb-4">Acerca de Marquesa GT</h2>
                     <p class="lead mb-4">
-                        Somos un emprendimiento apasionado por la belleza y el bienestar. Creemos que cada persona merece sentirse hermosa y cómoda en su propio hogar.
+                        Somos una agencia especializada en <strong>transformar marcas y potenciar negocios</strong> a través de estrategias integrales de comunicación y branding.
                     </p>
                     <p class="mb-4">
-                        Seleccionamos cuidadosamente cada producto que ofrecemos, priorizando la calidad, efectividad y el respeto por tu piel y el medio ambiente. Nuestro objetivo es brindarte una experiencia de compra única y productos que realmente marquen la diferencia.
+                        Con más de 5 años de experiencia en el sector, hemos ayudado a más de 50 empresas a crear identidades visuales sólidas y memorables. Nuestro enfoque integral abarca desde el diagnóstico inicial hasta la implementación completa de estrategias de comunicación.
                     </p>
-                    <div class="row g-3">
+                    <div class="row g-3 mb-4">
                         <div class="col-sm-6">
                             <div class="d-flex align-items-center">
-                                <i class="bi bi-check-circle-fill text-primary me-3" style="font-size: 1.5rem;"></i>
-                                <span>Productos de calidad</span>
+                                <i class="bi bi-award-fill text-primary me-3" style="font-size: 1.5rem;"></i>
+                                <span>Servicios profesionales de calidad</span>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="d-flex align-items-center">
-                                <i class="bi bi-check-circle-fill text-primary me-3" style="font-size: 1.5rem;"></i>
-                                <span>Envío rápido</span>
+                                <i class="bi bi-people-fill text-primary me-3" style="font-size: 1.5rem;"></i>
+                                <span>Estrategias personalizadas</span>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="d-flex align-items-center">
-                                <i class="bi bi-check-circle-fill text-primary me-3" style="font-size: 1.5rem;"></i>
-                                <span>Atención personalizada</span>
+                                <i class="bi bi-headset text-primary me-3" style="font-size: 1.5rem;"></i>
+                                <span>Atención especializada 24/7</span>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="d-flex align-items-center">
-                                <i class="bi bi-check-circle-fill text-primary me-3" style="font-size: 1.5rem;"></i>
-                                <span>Garantía de satisfacción</span>
+                                <i class="bi bi-graph-up-arrow text-primary me-3" style="font-size: 1.5rem;"></i>
+                                <span>Resultados comprobados</span>
                             </div>
                         </div>
+                    </div>
+                    <a href="#contacto" class="btn btn-primary btn-lg">
+                        <i class="bi bi-whatsapp me-2"></i>Contactar Ahora
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="py-5 bg-light">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="display-5 fw-bold mb-3">¿Listo para Transformar tu Marca?</h2>
+                    <p class="lead text-muted">Contáctanos para una consulta gratuita y descubre cómo podemos impulsar tu negocio</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="contact-card text-center h-100">
+                        <div class="contact-icon mb-3">
+                            <i class="bi bi-whatsapp"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">WhatsApp</h5>
+                        <p class="text-muted mb-3">Chatea con nosotros directamente</p>
+                        <a href="https://wa.me/50257687221" target="_blank" class="btn btn-success">
+                            <i class="bi bi-whatsapp me-2"></i>5768-7221
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="contact-card text-center h-100">
+                        <div class="contact-icon mb-3">
+                            <i class="bi bi-instagram"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Instagram</h5>
+                        <p class="text-muted mb-3">Síguenos para ver nuestros últimos proyectos</p>
+                        <a href="https://instagram.com/Marquesa.gt" target="_blank" class="btn btn-primary">
+                            <i class="bi bi-instagram me-2"></i>@Marquesa.gt
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="contact-card text-center h-100">
+                        <div class="contact-icon mb-3">
+                            <i class="bi bi-envelope-fill"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Email</h5>
+                        <p class="text-muted mb-3">Envíanos tu consulta por correo</p>
+                        <a href="mailto:info@marquesagt.com" class="btn btn-outline-primary">
+                            <i class="bi bi-envelope me-2"></i>info@marquesagt.com
+                        </a>
                     </div>
                 </div>
             </div>
@@ -226,78 +479,103 @@
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-4">
-                    <h5 class="fw-bold mb-3">
-                        <i class="bi bi-gem me-2"></i>Belleza & Hogar
+                    <h5 class="fw-bold mb-3 d-flex align-items-center">
+                        <img src="logos/Recurso 3.png" alt="Marquesa GT Logo" class="footer-logo me-2">
+                        Marquesa GT
                     </h5>
-                    <p class="text-muted">
-                        Tu destino para productos de belleza, cuidado personal y artículos para el hogar de la más alta calidad.
+                    <p class="text-muted mb-4">
+                        Transformamos marcas, potenciamos negocios. Tu éxito es nuestra pasión.
                     </p>
                     <div class="d-flex gap-3">
-                        <a href="#" class="text-light"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="text-light"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="text-light"><i class="bi bi-twitter"></i></a>
+                        <a href="https://instagram.com/Marquesa.gt" target="_blank" class="text-light social-link" title="Síguenos en Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/50257687221" target="_blank" class="text-light social-link" title="Contáctanos por WhatsApp">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+                        <a href="mailto:info@marquesagt.com" class="text-light social-link" title="Envíanos un email">
+                            <i class="bi bi-envelope-fill"></i>
+                        </a>
                     </div>
                 </div>
                 <div class="col-lg-2">
                     <h6 class="fw-bold mb-3">Enlaces</h6>
                     <ul class="list-unstyled">
-                        <li><a href="#inicio" class="text-muted text-decoration-none">Inicio</a></li>
-                        <li><a href="#productos" class="text-muted text-decoration-none">Productos</a></li>
-                        <li><a href="#nosotros" class="text-muted text-decoration-none">Nosotros</a></li>
+                        <li><a href="#inicio" class="text-muted text-decoration-none footer-link">Inicio</a></li>
+                        <li><a href="#servicios" class="text-muted text-decoration-none footer-link">Servicios</a></li>
+                        <li><a href="#nosotros" class="text-muted text-decoration-none footer-link">Nosotros</a></li>
+                        <li><a href="#proceso" class="text-muted text-decoration-none footer-link">Proceso</a></li>
+                        <li><a href="#contacto" class="text-muted text-decoration-none footer-link">Contacto</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3">
-                    <h6 class="fw-bold mb-3">Categorías</h6>
+                    <h6 class="fw-bold mb-3">Servicios</h6>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="text-muted text-decoration-none">Cuidado de la Piel</a></li>
-                        <li><a href="#" class="text-muted text-decoration-none">Maquillaje</a></li>
-                        <li><a href="#" class="text-muted text-decoration-none">Hogar</a></li>
+                        <li><a href="#servicios" class="text-muted text-decoration-none footer-link" data-category="diagnostico">Diagnóstico de Marca</a></li>
+                        <li><a href="#servicios" class="text-muted text-decoration-none footer-link" data-category="transformacion">Transformación de Imagen</a></li>
+                        <li><a href="#servicios" class="text-muted text-decoration-none footer-link" data-category="sistemas">Sistemas Gráficos</a></li>
+                        <li><a href="#servicios" class="text-muted text-decoration-none footer-link" data-category="branding">Soluciones de Branding</a></li>
+                        <li><a href="#servicios" class="text-muted text-decoration-none footer-link" data-category="campanas">Campañas Publicitarias</a></li>
+                        <li><a href="#servicios" class="text-muted text-decoration-none footer-link" data-category="asesoria">Asesoría y Consultoría</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3">
                     <h6 class="fw-bold mb-3">Contacto</h6>
                     <ul class="list-unstyled text-muted">
-                        <li><i class="bi bi-envelope me-2"></i>info@bellezayhogar.com</li>
-                        <li><i class="bi bi-phone me-2"></i>+1 234 567 8900</li>
-                        <li><i class="bi bi-geo-alt me-2"></i>Ciudad, País</li>
+                        <li class="mb-2">
+                            <i class="bi bi-whatsapp me-2"></i>
+                            <a href="https://wa.me/50257687221" class="text-muted text-decoration-none">5768-7221</a>
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-instagram me-2"></i>
+                            <a href="https://instagram.com/Marquesa.gt" class="text-muted text-decoration-none">@Marquesa.gt</a>
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-envelope me-2"></i>
+                            <a href="mailto:info@marquesagt.com" class="text-muted text-decoration-none">info@marquesagt.com</a>
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-geo-alt me-2"></i>Guatemala
+                        </li>
                     </ul>
                 </div>
             </div>
             <hr class="my-4">
             <div class="row">
                 <div class="col-12 text-center">
-                    <p class="text-muted mb-0">&copy; 2025 Belleza & Hogar. Todos los derechos reservados.</p>
+                    <p class="text-muted mb-0">&copy; 2025 Marquesa GT. Todos los derechos reservados. | Diseñado con ❤️ para tu éxito</p>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Modal del Carrito -->
+    <!-- Modal del Carrito de Servicios -->
     <div class="modal fade" id="carritoModal" tabindex="-1">
         <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">
-                        <i class="bi bi-cart3 me-2"></i>Carrito de Compras
+            <div class="modal-content border-0 shadow-lg">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title fw-bold">
+                        <i class="bi bi-briefcase me-2"></i>Servicios Seleccionados
                     </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
                     <div id="cart-items">
                         <div class="text-center py-5 text-muted">
-                            <i class="bi bi-cart-x" style="font-size: 3rem;"></i>
-                            <p class="mt-3">Tu carrito está vacío</p>
+                            <i class="bi bi-briefcase-fill" style="font-size: 3rem;"></i>
+                            <p class="mt-3 mb-0">No has seleccionado ningún servicio</p>
+                            <small>Explora nuestros servicios y agrégalos aquí</small>
                         </div>
                     </div>
                 </div>
-                <div class="modal-footer">
+                <div class="modal-footer bg-light">
                     <div class="w-100">
                         <div class="d-flex justify-content-between align-items-center mb-3">
-                            <strong>Total: $<span id="cart-total">0.00</span></strong>
+                            <strong class="h5 mb-0">Total: $<span id="cart-total">0.00</span></strong>
                         </div>
                         <div class="d-grid">
-                            <button class="btn btn-primary btn-lg" id="checkout-btn" disabled>
-                                <i class="bi bi-credit-card me-2"></i>Proceder al Pago
+                            <button class="btn btn-success btn-lg" id="checkout-btn" disabled>
+                                <i class="bi bi-whatsapp me-2"></i>Solicitar Cotización por WhatsApp
                             </button>
                         </div>
                     </div>

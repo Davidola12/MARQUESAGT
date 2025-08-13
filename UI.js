@@ -1,113 +1,162 @@
-// Datos de productos
-const productos = [
-    // Cuidado de la Piel
+// Servicios basados en la información del PDF
+const servicios = [
+    // DIAGNÓSTICO DE MARCA
     {
         id: 1,
-        nombre: "Serum Vitamina C",
-        categoria: "skincare",
-        precio: 29.99,
-        precioOriginal: 39.99,
-        imagen: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-        descripcion: "Serum antioxidante con vitamina C pura para iluminar y proteger la piel.",
-        descuento: 25
+        nombre: "Auditoría Completa de Marca",
+        categoria: "diagnostico",
+        precio: 250.00,
+        precioOriginal: 300.00,
+        imagen: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+        descripcion: "Análisis profundo de tu marca actual, incluyendo identidad visual, posicionamiento y percepción del mercado.",
+        descuento: 17
     },
     {
         id: 2,
-        nombre: "Crema Hidratante Anti-edad",
-        categoria: "skincare",
-        precio: 45.99,
-        imagen: "https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-        descripcion: "Crema hidratante con ácido hialurónico y retinol para combatir los signos del envejecimiento."
+        nombre: "Investigación de Mercado",
+        categoria: "diagnostico",
+        precio: 180.00,
+        imagen: "https://images.unsplash.com/photo-1553729459-efe14ef6055d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+        descripcion: "Estudio detallado de tu mercado objetivo, competencia y oportunidades de crecimiento."
     },
     {
         id: 3,
-        nombre: "Limpiador Facial Suave",
-        categoria: "skincare",
-        precio: 19.99,
-        imagen: "https://images.unsplash.com/photo-1571875257727-256c39da42af?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-        descripcion: "Limpiador facial suave para todo tipo de piel, elimina impurezas sin resecar."
-    },
-    {
-        id: 4,
-        nombre: "Mascarilla de Arcilla",
-        categoria: "skincare",
-        precio: 24.99,
-        precioOriginal: 34.99,
-        imagen: "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-        descripcion: "Mascarilla purificante de arcilla bentonita para piel grasa y mixta.",
-        descuento: 29
+        nombre: "Análisis de Competencia",
+        categoria: "diagnostico",
+        precio: 150.00,
+        imagen: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+        descripcion: "Evaluación exhaustiva de tus competidores directos e indirectos para identificar ventajas competitivas."
     },
 
-    // Maquillaje
+    // TRANSFORMACIÓN DE IMAGEN CORPORATIVA
+    {
+        id: 4,
+        nombre: "Rediseño de Logo Profesional",
+        categoria: "transformacion",
+        precio: 350.00,
+        imagen: "https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+        descripcion: "Creación de un logo moderno, memorable y versátil que represente perfectamente tu marca."
+    },
     {
         id: 5,
-        nombre: "Base de Maquillaje HD",
-        categoria: "makeup",
-        precio: 32.99,
-        imagen: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-        descripcion: "Base de maquillaje de alta definición con cobertura completa y acabado natural."
+        nombre: "Manual de Identidad Corporativa",
+        categoria: "transformacion",
+        precio: 500.00,
+        precioOriginal: 650.00,
+        imagen: "https://images.unsplash.com/photo-1542744094-3a31f272c490?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+        descripcion: "Guía completa de uso de tu identidad visual con especificaciones técnicas y aplicaciones.",
+        descuento: 23
     },
     {
         id: 6,
-        nombre: "Paleta de Sombras Sunset",
-        categoria: "makeup",
-        precio: 38.99,
-        precioOriginal: 49.99,
-        imagen: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-        descripcion: "Paleta de 12 sombras en tonos cálidos perfecta para looks de día y noche.",
-        descuento: 22
+        nombre: "Renovación de Imagen Completa",
+        categoria: "transformacion",
+        precio: 800.00,
+        imagen: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+        descripcion: "Transformación integral de tu imagen corporativa incluyendo logo, colores, tipografías y aplicaciones."
     },
+
+    // SISTEMAS GRÁFICOS COMPLETOS
     {
         id: 7,
-        nombre: "Labial Mate Duradero",
-        categoria: "makeup",
-        precio: 16.99,
-        imagen: "https://images.unsplash.com/photo-1586495777744-4413f21062fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-        descripcion: "Labial mate de larga duración disponible en 8 tonos vibrantes."
+        nombre: "Papelería Corporativa Completa",
+        categoria: "sistemas",
+        precio: 280.00,
+        imagen: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+        descripcion: "Diseño de tarjetas de presentación, hojas membretadas, sobres, facturas y documentos oficiales."
     },
     {
         id: 8,
-        nombre: "Rubor Natural Glow",
-        categoria: "makeup",
-        precio: 22.99,
-        imagen: "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-        descripcion: "Rubor en polvo con acabado natural para un look fresco y luminoso."
+        nombre: "Material Publicitario",
+        categoria: "sistemas",
+        precio: 320.00,
+        imagen: "https://images.unsplash.com/photo-1493612276216-ee3925520721?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+        descripcion: "Flyers, brochures, catálogos, banners y todo el material promocional para tu empresa."
     },
-
-    // Hogar
     {
         id: 9,
-        nombre: "Vela Aromática Lavanda",
-        categoria: "home",
-        precio: 18.99,
-        imagen: "https://images.unsplash.com/photo-1602874801652-9c1b5de5cd3c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-        descripcion: "Vela de cera de soja con aroma relajante de lavanda, 40 horas de duración."
+        nombre: "Señalética Empresarial",
+        categoria: "sistemas",
+        precio: 450.00,
+        precioOriginal: 550.00,
+        imagen: "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+        descripcion: "Diseño de rótulos, señales internas y sistema de wayfinding para tu empresa.",
+        descuento: 18
     },
+
+    // SOLUCIONES DE BRANDING
     {
         id: 10,
-        nombre: "Difusor de Aceites Esenciales",
-        categoria: "home",
-        precio: 55.99,
-        precioOriginal: 75.99,
-        imagen: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-        descripcion: "Difusor ultrasónico de aceites esenciales con luces LED y temporizador.",
-        descuento: 26
+        nombre: "Estrategia de Marca Integral",
+        categoria: "branding",
+        precio: 600.00,
+        imagen: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+        descripcion: "Desarrollo completo de estrategia de marca, posicionamiento y propuesta de valor única."
     },
     {
         id: 11,
-        nombre: "Set de Toallas Bambú",
-        categoria: "home",
-        precio: 42.99,
-        imagen: "https://images.unsplash.com/photo-1631889993959-41b4e9c6e3c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-        descripcion: "Set de 4 toallas de bambú ultra suaves, antibacterianas y ecológicas."
+        nombre: "Naming y Concepto Creativo",
+        categoria: "branding",
+        precio: 400.00,
+        imagen: "https://images.unsplash.com/photo-1434626881859-194d67b2b86f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+        descripcion: "Creación del nombre perfecto y desarrollo del concepto creativo para tu marca."
     },
     {
         id: 12,
-        nombre: "Organizador de Baño",
-        categoria: "home",
-        precio: 28.99,
-        imagen: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-        descripcion: "Organizador de baño de bambú con múltiples compartimentos para cosméticos."
+        nombre: "Arquitectura de Marca",
+        categoria: "branding",
+        precio: 750.00,
+        precioOriginal: 900.00,
+        imagen: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+        descripcion: "Estructuración completa del portfolio de marcas y submarcas de tu empresa.",
+        descuento: 17
+    },
+
+    // CAMPAÑAS DE LANZAMIENTO/RELANZAMIENTO
+    {
+        id: 13,
+        nombre: "Campaña de Lanzamiento 360°",
+        categoria: "campanas",
+        precio: 1200.00,
+        imagen: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+        descripcion: "Estrategia completa de lanzamiento con material gráfico, plan de medios y comunicación integral."
+    },
+    {
+        id: 14,
+        nombre: "Relanzamiento de Marca",
+        categoria: "campanas",
+        precio: 1000.00,
+        imagen: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+        descripcion: "Renovación completa de imagen y estrategia para marcas existentes.",
+        descuento: 25
+    },
+
+    // ASESORÍA EN POSICIONAMIENTO Y REPUTACIÓN (agregados)
+    {
+        id: 15,
+        nombre: "Consultoría Estratégica de Marca",
+        categoria: "asesoria",
+        precio: 400.00,
+        imagen: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+        descripcion: "Asesoramiento especializado para definir y fortalecer la estrategia de tu marca en el mercado."
+    },
+    {
+        id: 16,
+        nombre: "Gestión de Reputación Online",
+        categoria: "asesoria",
+        precio: 350.00,
+        precioOriginal: 450.00,
+        imagen: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+        descripcion: "Monitoreo y gestión de la reputación digital de tu marca en todas las plataformas.",
+        descuento: 22
+    },
+    {
+        id: 17,
+        nombre: "Workshop de Branding Empresarial",
+        categoria: "asesoria",
+        precio: 250.00,
+        imagen: "https://images.unsplash.com/photo-1553484771-371a605b060b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+        descripcion: "Capacitación especializada para equipos sobre implementación y gestión de marca."
     }
 ];
 
@@ -116,7 +165,7 @@ let carrito = [];
 let filtroActual = 'all';
 
 // Elementos del DOM
-const productosGrid = document.getElementById('productos-grid');
+const serviciosGrid = document.getElementById('servicios-grid');
 const cartCount = document.getElementById('cart-count');
 const cartItems = document.getElementById('cart-items');
 const cartTotal = document.getElementById('cart-total');
@@ -124,11 +173,27 @@ const checkoutBtn = document.getElementById('checkout-btn');
 
 // Inicialización cuando el DOM está listo
 document.addEventListener('DOMContentLoaded', function() {
-    cargarProductos();
+    // Validar que los elementos existen antes de usarlos
+    const serviciosGridElement = document.getElementById('servicios-grid');
+    if (serviciosGridElement) {
+        cargarServicios();
+    } else {
+        console.warn('Elemento servicios-grid no encontrado');
+    }
+    
     actualizarCarrito();
     initEventListeners();
     initScrollEffects();
 });
+
+// Función mejorada para cargar servicios con validación
+function cargarServicios() {
+    if (!serviciosGrid) {
+        console.error('Grid de servicios no encontrado');
+        return;
+    }
+    mostrarServicios(servicios);
+}
 
 // Event Listeners
 function initEventListeners() {
@@ -137,16 +202,36 @@ function initEventListeners() {
         btn.addEventListener('click', function() {
             const filtro = this.getAttribute('data-filter');
             setFiltroActivo(this);
-            filtrarProductos(filtro);
+            filtrarServicios(filtro);
         });
     });
 
-    // Enlaces de categorías
+    // Enlaces de categorías (incluir footer links)
     document.querySelectorAll('[data-category]').forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             const categoria = this.getAttribute('data-category');
             filtrarPorCategoria(categoria);
+        });
+    });
+
+    // Enlaces del footer con data-category
+    document.querySelectorAll('.footer-link[data-category]').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const categoria = this.getAttribute('data-category');
+            filtrarPorCategoria(categoria);
+            
+            // Scroll suave a la sección de servicios
+            setTimeout(() => {
+                const serviciosSection = document.getElementById('servicios');
+                if (serviciosSection) {
+                    serviciosSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            }, 100);
         });
     });
 
@@ -175,25 +260,29 @@ function initEventListeners() {
 
 // Efectos de scroll
 function initScrollEffects() {
-    // Navbar transparency on scroll
-    window.addEventListener('scroll', function() {
+    let ticking = false;
+
+    function updateOnScroll() {
         const navbar = document.querySelector('.navbar');
-        if (window.scrollY > 100) {
-            navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+        const scrollY = window.scrollY;
+        
+        // Navbar transparency on scroll
+        if (scrollY > 100) {
+            navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
+            navbar.style.backdropFilter = 'blur(20px)';
         } else {
             navbar.style.backgroundColor = 'rgba(255, 255, 255, 1)';
+            navbar.style.backdropFilter = 'blur(10px)';
         }
-    });
 
-    // Highlight active nav link based on scroll position
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-link');
-
-    window.addEventListener('scroll', function() {
+        // Highlight active nav link based on scroll position
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
         let current = '';
+        
         sections.forEach(section => {
             const sectionTop = section.offsetTop - 100;
-            if (window.scrollY >= sectionTop) {
+            if (scrollY >= sectionTop) {
                 current = section.getAttribute('id');
             }
         });
@@ -204,62 +293,74 @@ function initScrollEffects() {
                 link.classList.add('active');
             }
         });
-    });
+
+        ticking = false;
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(updateOnScroll);
+            ticking = true;
+        }
+    }
+
+    window.addEventListener('scroll', requestTick);
 }
 
-// Cargar y mostrar productos
-function cargarProductos() {
-    mostrarProductos(productos);
+// Cargar y mostrar servicios
+function cargarServicios() {
+    mostrarServicios(servicios);
 }
 
-function mostrarProductos(productosArray) {
-    productosGrid.innerHTML = '';
+function mostrarServicios(serviciosArray) {
+    serviciosGrid.innerHTML = '';
     
-    if (productosArray.length === 0) {
-        productosGrid.innerHTML = `
-            <div class="col-12 text-center py-5">
-                <i class="bi bi-search" style="font-size: 3rem; color: var(--text-muted);"></i>
-                <p class="mt-3 text-muted">No se encontraron productos en esta categoría.</p>
+    if (serviciosArray.length === 0) {
+        serviciosGrid.innerHTML = `
+            <div class="col-12 text-center">
+                <p class="text-muted">No se encontraron servicios.</p>
             </div>
         `;
         return;
     }
 
-    productosArray.forEach((producto, index) => {
-        const productoCard = crearProductoCard(producto);
-        productosGrid.appendChild(productoCard);
+    serviciosArray.forEach((servicio, index) => {
+        const servicioCard = crearServicioCard(servicio);
+        serviciosGrid.appendChild(servicioCard);
         
-        // Añadir animación con delay
+        // Animación escalonada
         setTimeout(() => {
-            productoCard.classList.add('fade-in-up');
+            servicioCard.classList.add('fade-in-up');
         }, index * 100);
     });
 }
 
-function crearProductoCard(producto) {
+function crearServicioCard(servicio) {
     const col = document.createElement('div');
     col.className = 'col-lg-3 col-md-4 col-sm-6';
     
-    const descuentoHtml = producto.descuento ? 
-        `<div class="discount-badge">-${producto.descuento}%</div>` : '';
+    const descuentoHtml = servicio.descuento ? 
+        `<div class="discount-badge">-${servicio.descuento}%</div>` : '';
     
-    const precioOriginalHtml = producto.precioOriginal ? 
-        `<span class="product-original-price me-2">$${producto.precioOriginal}</span>` : '';
-
+    const precioOriginalHtml = servicio.precioOriginal ? 
+        `<span class="product-original-price me-2">$${servicio.precioOriginal}</span>` : '';
+    
     col.innerHTML = `
         <div class="card product-card h-100 position-relative">
             ${descuentoHtml}
-            <img src="${producto.imagen}" class="card-img-top product-img" alt="${producto.nombre}">
+            <img src="${servicio.imagen}" class="card-img-top product-img" alt="${servicio.nombre}">
             <div class="card-body d-flex flex-column">
-                <h6 class="card-title fw-bold">${producto.nombre}</h6>
-                <p class="card-text text-muted small flex-grow-1">${producto.descripcion}</p>
-                <div class="d-flex justify-content-between align-items-center mt-auto">
-                    <div>
-                        ${precioOriginalHtml}
-                        <span class="product-price">$${producto.precio}</span>
+                <h5 class="card-title">${servicio.nombre}</h5>
+                <p class="card-text text-muted flex-grow-1">${servicio.descripcion}</p>
+                <div class="mt-auto">
+                    <div class="d-flex align-items-center justify-content-between mb-3">
+                        <div class="price-container">
+                            ${precioOriginalHtml}
+                            <span class="product-price">$${servicio.precio}</span>
+                        </div>
                     </div>
-                    <button class="btn btn-outline-primary btn-sm" onclick="agregarAlCarrito(${producto.id})">
-                        <i class="bi bi-cart-plus"></i>
+                    <button class="btn btn-primary w-100" onclick="agregarAlCarrito(${servicio.id})">
+                        <i class="bi bi-cart-plus me-2"></i>Contratar Servicio
                     </button>
                 </div>
             </div>
@@ -269,7 +370,7 @@ function crearProductoCard(producto) {
     return col;
 }
 
-// Filtros de productos
+// Filtros de servicios
 function setFiltroActivo(botonActivo) {
     document.querySelectorAll('.filter-btn').forEach(btn => {
         btn.classList.remove('active');
@@ -282,65 +383,81 @@ function setFiltroActivo(botonActivo) {
     botonActivo.classList.remove('btn-outline-primary');
 }
 
-function filtrarProductos(filtro) {
+function filtrarServicios(filtro) {
     filtroActual = filtro;
     
     if (filtro === 'all') {
-        mostrarProductos(productos);
+        mostrarServicios(servicios);
     } else {
-        const productosFiltrados = productos.filter(producto => producto.categoria === filtro);
-        mostrarProductos(productosFiltrados);
+        const serviciosFiltrados = servicios.filter(servicio => servicio.categoria === filtro);
+        mostrarServicios(serviciosFiltrados);
     }
 }
 
 function filtrarPorCategoria(categoria) {
-    // Scroll to productos section
-    document.getElementById('productos').scrollIntoView({
-        behavior: 'smooth'
-    });
+    // Validar si la categoría existe
+    if (!categoria || categoria === 'all') {
+        categoria = 'all';
+    }
     
-    // Set active filter
-    setTimeout(() => {
-        const filterBtn = document.querySelector(`[data-filter="${categoria}"]`);
-        if (filterBtn) {
-            setFiltroActivo(filterBtn);
-            filtrarProductos(categoria);
+    const filtroBtn = document.querySelector(`[data-filter="${categoria}"]`);
+    if (filtroBtn) {
+        setFiltroActivo(filtroBtn);
+        filtrarServicios(categoria);
+    } else {
+        // Si no existe el botón filtro, mostrar todos
+        const todoBtn = document.querySelector('[data-filter="all"]');
+        if (todoBtn) {
+            setFiltroActivo(todoBtn);
+            filtrarServicios('all');
         }
-    }, 500);
+    }
+    
+    // Scroll suave a la sección de servicios con validación
+    setTimeout(() => {
+        const serviciosSection = document.getElementById('servicios');
+        if (serviciosSection) {
+            serviciosSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    }, 100);
 }
 
 // Funciones del carrito
-function agregarAlCarrito(productoId) {
-    const producto = productos.find(p => p.id === productoId);
-    if (!producto) return;
-
-    const itemExistente = carrito.find(item => item.id === productoId);
+function agregarAlCarrito(servicioId) {
+    const servicio = servicios.find(p => p.id === servicioId);
+    if (!servicio) return;
+    
+    const itemExistente = carrito.find(item => item.id === servicioId);
     
     if (itemExistente) {
-        itemExistente.cantidad++;
+        itemExistente.cantidad += 1;
     } else {
         carrito.push({
-            ...producto,
+            ...servicio,
             cantidad: 1
         });
     }
     
     actualizarCarrito();
-    mostrarNotificacion(`${producto.nombre} agregado al carrito`);
+    mostrarNotificacion(`${servicio.nombre} agregado al carrito`);
 }
 
-function eliminarDelCarrito(productoId) {
-    carrito = carrito.filter(item => item.id !== productoId);
+function eliminarDelCarrito(servicioId) {
+    carrito = carrito.filter(item => item.id !== servicioId);
     actualizarCarrito();
+    mostrarNotificacion('Servicio eliminado del carrito');
 }
 
-function cambiarCantidad(productoId, nuevaCantidad) {
+function cambiarCantidad(servicioId, nuevaCantidad) {
     if (nuevaCantidad <= 0) {
-        eliminarDelCarrito(productoId);
+        eliminarDelCarrito(servicioId);
         return;
     }
     
-    const item = carrito.find(item => item.id === productoId);
+    const item = carrito.find(item => item.id === servicioId);
     if (item) {
         item.cantidad = nuevaCantidad;
         actualizarCarrito();
@@ -348,42 +465,57 @@ function cambiarCantidad(productoId, nuevaCantidad) {
 }
 
 function actualizarCarrito() {
+    const cantidadTotal = carrito.reduce((total, item) => total + item.cantidad, 0);
+    const precioTotal = carrito.reduce((total, item) => total + (item.precio * item.cantidad), 0);
+    
     // Actualizar contador
-    const totalItems = carrito.reduce((total, item) => total + item.cantidad, 0);
-    cartCount.textContent = totalItems;
-    cartCount.style.display = totalItems > 0 ? 'block' : 'none';
+    cartCount.textContent = cantidadTotal;
+    
+    // Actualizar total
+    if (cartTotal) {
+        cartTotal.textContent = precioTotal.toFixed(2);
+    }
     
     // Actualizar contenido del carrito
+    if (cartItems) {
+        mostrarItemsCarrito();
+    }
+    
+    // Habilitar/deshabilitar botón de checkout
+    if (checkoutBtn) {
+        checkoutBtn.disabled = carrito.length === 0;
+        
+        // Actualizar el evento click para WhatsApp
+        checkoutBtn.onclick = function() {
+            if (carrito.length > 0) {
+                enviarPorWhatsApp();
+            }
+        };
+    }
+}
+
+function mostrarItemsCarrito() {
     if (carrito.length === 0) {
         cartItems.innerHTML = `
             <div class="text-center py-5 text-muted">
-                <i class="bi bi-cart-x" style="font-size: 3rem;"></i>
-                <p class="mt-3">Tu carrito está vacío</p>
+                <i class="bi bi-briefcase-fill" style="font-size: 3rem;"></i>
+                <p class="mt-3">No has seleccionado ningún servicio</p>
             </div>
         `;
-        checkoutBtn.disabled = true;
-    } else {
-        cartItems.innerHTML = carrito.map(item => crearItemCarrito(item)).join('');
-        checkoutBtn.disabled = false;
+        return;
     }
     
-    // Actualizar total
-    const total = carrito.reduce((sum, item) => sum + (item.precio * item.cantidad), 0);
-    cartTotal.textContent = total.toFixed(2);
-}
-
-function crearItemCarrito(item) {
-    return `
+    cartItems.innerHTML = carrito.map(item => `
         <div class="cart-item">
             <div class="row align-items-center">
-                <div class="col-3">
-                    <img src="${item.imagen}" alt="${item.nombre}" class="img-fluid">
+                <div class="col-md-2">
+                    <img src="${item.imagen}" alt="${item.nombre}" class="img-fluid rounded">
                 </div>
-                <div class="col-5">
-                    <h6 class="mb-1">${item.nombre}</h6>
-                    <p class="text-muted small mb-0">$${item.precio} c/u</p>
+                <div class="col-md-4">
+                    <h6 class="mb-0">${item.nombre}</h6>
+                    <small class="text-muted">${item.descripcion.substring(0, 50)}...</small>
                 </div>
-                <div class="col-2">
+                <div class="col-md-2">
                     <div class="quantity-controls">
                         <button class="quantity-btn" onclick="cambiarCantidad(${item.id}, ${item.cantidad - 1})">
                             <i class="bi bi-dash"></i>
@@ -394,83 +526,129 @@ function crearItemCarrito(item) {
                         </button>
                     </div>
                 </div>
-                <div class="col-2 text-end">
-                    <div class="fw-bold">$${(item.precio * item.cantidad).toFixed(2)}</div>
-                    <button class="btn btn-link text-danger p-0 small" onclick="eliminarDelCarrito(${item.id})">
-                        <i class="bi bi-trash"></i> Eliminar
+                <div class="col-md-2">
+                    <span class="fw-bold">$${item.precio}</span>
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-outline-danger btn-sm" onclick="eliminarDelCarrito(${item.id})">
+                        <i class="bi bi-trash"></i>
                     </button>
                 </div>
             </div>
         </div>
-    `;
+    `).join('');
 }
 
-// Función para mostrar notificaciones
-function mostrarNotificacion(mensaje) {
+function enviarPorWhatsApp() {
+    if (carrito.length === 0) {
+        mostrarNotificacion('No hay servicios seleccionados');
+        return;
+    }
+
+    // Validar que hay servicios válidos
+    const serviciosValidos = carrito.filter(item => item && item.nombre && item.precio);
+    if (serviciosValidos.length === 0) {
+        mostrarNotificacion('Error: No hay servicios válidos en el carrito');
+        return;
+    }
+
+    const mensajeItems = serviciosValidos.map(item => 
+        `• ${item.nombre} (Cantidad: ${item.cantidad || 1}) - $${((item.precio || 0) * (item.cantidad || 1)).toFixed(2)}`
+    ).join('\n');
+    
+    const total = serviciosValidos.reduce((sum, item) => sum + ((item.precio || 0) * (item.cantidad || 1)), 0);
+    
+    const mensaje = `¡Hola Marquesa GT! 👋
+
+Me interesa contratar los siguientes servicios:
+
+${mensajeItems}
+
+📝 *Total: $${total.toFixed(2)}*
+
+¿Podrían enviarme más información sobre estos servicios y el proceso para continuar?
+
+¡Gracias! 😊`;
+    
+    const numeroWhatsApp = '50257687221';
+    const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
+    
+    // Abrir WhatsApp en nueva ventana
+    try {
+        window.open(url, '_blank');
+        
+        // Cerrar modal después del envío exitoso
+        const modal = bootstrap.Modal.getInstance(document.getElementById('carritoModal'));
+        if (modal) {
+            modal.hide();
+        }
+        
+        mostrarNotificacion('¡Mensaje enviado a WhatsApp! Pronto nos pondremos en contacto contigo.');
+        
+    } catch (error) {
+        console.error('Error al abrir WhatsApp:', error);
+        mostrarNotificacion('Error al abrir WhatsApp. Por favor, intenta nuevamente.');
+    }
+}
+
+function mostrarNotificacion(mensaje, tipo = 'success') {
+    // Validar mensaje
+    if (!mensaje || typeof mensaje !== 'string') {
+        return;
+    }
+
+    // Remover notificaciones existentes
+    const notificacionesExistentes = document.querySelectorAll('.notification-custom');
+    notificacionesExistentes.forEach(notif => {
+        if (notif.parentNode) {
+            notif.parentNode.removeChild(notif);
+        }
+    });
+
     // Crear elemento de notificación
-    const notification = document.createElement('div');
-    notification.className = 'alert alert-success position-fixed';
-    notification.style.cssText = `
+    const notificacion = document.createElement('div');
+    notificacion.className = `alert alert-${tipo} position-fixed notification-custom`;
+    notificacion.style.cssText = `
         top: 100px;
         right: 20px;
         z-index: 9999;
         min-width: 300px;
-        opacity: 0;
-        transform: translateX(100%);
-        transition: all 0.3s ease;
-    `;
-    notification.innerHTML = `
-        <i class="bi bi-check-circle-fill me-2"></i>
-        ${mensaje}
+        max-width: 400px;
+        animation: slideInRight 0.3s ease;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        border: none;
+        border-radius: 10px;
     `;
     
-    document.body.appendChild(notification);
+    const icono = tipo === 'success' ? 'bi-check-circle-fill' : 
+                  tipo === 'warning' ? 'bi-exclamation-triangle-fill' : 
+                  tipo === 'danger' ? 'bi-x-circle-fill' : 'bi-info-circle-fill';
     
-    // Animar entrada
+    notificacion.innerHTML = `
+        <div class="d-flex align-items-center">
+            <i class="bi ${icono} me-2"></i>
+            <span>${mensaje}</span>
+            <button type="button" class="btn-close ms-auto" onclick="this.parentElement.parentElement.remove()"></button>
+        </div>
+    `;
+    
+    document.body.appendChild(notificacion);
+    
+    // Remover después de 4 segundos
     setTimeout(() => {
-        notification.style.opacity = '1';
-        notification.style.transform = 'translateX(0)';
-    }, 100);
-    
-    // Animar salida y remover
-    setTimeout(() => {
-        notification.style.opacity = '0';
-        notification.style.transform = 'translateX(100%)';
-        setTimeout(() => {
-            document.body.removeChild(notification);
-        }, 300);
-    }, 3000);
-}
-
-// Función para búsqueda (opcional para expansión futura)
-function buscarProductos(termino) {
-    const resultados = productos.filter(producto => 
-        producto.nombre.toLowerCase().includes(termino.toLowerCase()) ||
-        producto.descripcion.toLowerCase().includes(termino.toLowerCase())
-    );
-    mostrarProductos(resultados);
-}
-
-// Función para ordenar productos (opcional para expansión futura)
-function ordenarProductos(criterio) {
-    let productosOrdenados = [...productos];
-    
-    switch (criterio) {
-        case 'precio-asc':
-            productosOrdenados.sort((a, b) => a.precio - b.precio);
-            break;
-        case 'precio-desc':
-            productosOrdenados.sort((a, b) => b.precio - a.precio);
-            break;
-        case 'nombre':
-            productosOrdenados.sort((a, b) => a.nombre.localeCompare(b.nombre));
-            break;
-    }
-    
-    mostrarProductos(productosOrdenados);
+        if (notificacion.parentNode) {
+            notificacion.style.animation = 'slideOutRight 0.3s ease';
+            setTimeout(() => {
+                if (notificacion.parentNode) {
+                    notificacion.parentNode.removeChild(notificacion);
+                }
+            }, 300);
+        }
+    }, 4000);
 }
 
 // Exportar funciones para uso global
 window.agregarAlCarrito = agregarAlCarrito;
 window.eliminarDelCarrito = eliminarDelCarrito;
 window.cambiarCantidad = cambiarCantidad;
+window.filtrarPorCategoria = filtrarPorCategoria;
