@@ -1,12 +1,12 @@
-// Servicios basados en la información del PDF
+// Servicios basados en la información del PDF - PRECIOS EN QUETZALES
 const servicios = [
     // DIAGNÓSTICO DE MARCA
     {
         id: 1,
         nombre: "Auditoría Completa de Marca",
         categoria: "diagnostico",
-        precio: 250.00,
-        precioOriginal: 300.00,
+        precio: 1950.00,
+        precioOriginal: 2340.00,
         imagen: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
         descripcion: "Análisis profundo de tu marca actual, incluyendo identidad visual, posicionamiento y percepción del mercado.",
         descuento: 17
@@ -15,7 +15,7 @@ const servicios = [
         id: 2,
         nombre: "Investigación de Mercado",
         categoria: "diagnostico",
-        precio: 180.00,
+        precio: 1404.00,
         imagen: "https://images.unsplash.com/photo-1553729459-efe14ef6055d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
         descripcion: "Estudio detallado de tu mercado objetivo, competencia y oportunidades de crecimiento."
     },
@@ -23,7 +23,7 @@ const servicios = [
         id: 3,
         nombre: "Análisis de Competencia",
         categoria: "diagnostico",
-        precio: 150.00,
+        precio: 1170.00,
         imagen: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
         descripcion: "Evaluación exhaustiva de tus competidores directos e indirectos para identificar ventajas competitivas."
     },
@@ -33,7 +33,7 @@ const servicios = [
         id: 4,
         nombre: "Rediseño de Logo Profesional",
         categoria: "transformacion",
-        precio: 350.00,
+        precio: 2730.00,
         imagen: "https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
         descripcion: "Creación de un logo moderno, memorable y versátil que represente perfectamente tu marca."
     },
@@ -41,8 +41,8 @@ const servicios = [
         id: 5,
         nombre: "Manual de Identidad Corporativa",
         categoria: "transformacion",
-        precio: 500.00,
-        precioOriginal: 650.00,
+        precio: 3900.00,
+        precioOriginal: 5070.00,
         imagen: "https://images.unsplash.com/photo-1542744094-3a31f272c490?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
         descripcion: "Guía completa de uso de tu identidad visual con especificaciones técnicas y aplicaciones.",
         descuento: 23
@@ -51,7 +51,7 @@ const servicios = [
         id: 6,
         nombre: "Renovación de Imagen Completa",
         categoria: "transformacion",
-        precio: 800.00,
+        precio: 6240.00,
         imagen: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
         descripcion: "Transformación integral de tu imagen corporativa incluyendo logo, colores, tipografías y aplicaciones."
     },
@@ -61,7 +61,7 @@ const servicios = [
         id: 7,
         nombre: "Papelería Corporativa Completa",
         categoria: "sistemas",
-        precio: 280.00,
+        precio: 2184.00,
         imagen: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
         descripcion: "Diseño de tarjetas de presentación, hojas membretadas, sobres, facturas y documentos oficiales."
     },
@@ -69,7 +69,7 @@ const servicios = [
         id: 8,
         nombre: "Material Publicitario",
         categoria: "sistemas",
-        precio: 320.00,
+        precio: 2496.00,
         imagen: "https://images.unsplash.com/photo-1493612276216-ee3925520721?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
         descripcion: "Flyers, brochures, catálogos, banners y todo el material promocional para tu empresa."
     },
@@ -77,8 +77,8 @@ const servicios = [
         id: 9,
         nombre: "Señalética Empresarial",
         categoria: "sistemas",
-        precio: 450.00,
-        precioOriginal: 550.00,
+        precio: 3510.00,
+        precioOriginal: 4290.00,
         imagen: "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
         descripcion: "Diseño de rótulos, señales internas y sistema de wayfinding para tu empresa.",
         descuento: 18
@@ -89,7 +89,7 @@ const servicios = [
         id: 10,
         nombre: "Estrategia de Marca Integral",
         categoria: "branding",
-        precio: 600.00,
+        precio: 4680.00,
         imagen: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
         descripcion: "Desarrollo completo de estrategia de marca, posicionamiento y propuesta de valor única."
     },
@@ -97,7 +97,7 @@ const servicios = [
         id: 11,
         nombre: "Naming y Concepto Creativo",
         categoria: "branding",
-        precio: 400.00,
+        precio: 3120.00,
         imagen: "https://images.unsplash.com/photo-1434626881859-194d67b2b86f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
         descripcion: "Creación del nombre perfecto y desarrollo del concepto creativo para tu marca."
     },
@@ -105,8 +105,8 @@ const servicios = [
         id: 12,
         nombre: "Arquitectura de Marca",
         categoria: "branding",
-        precio: 750.00,
-        precioOriginal: 900.00,
+        precio: 5850.00,
+        precioOriginal: 7020.00,
         imagen: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
         descripcion: "Estructuración completa del portfolio de marcas y submarcas de tu empresa.",
         descuento: 17
@@ -117,7 +117,7 @@ const servicios = [
         id: 13,
         nombre: "Campaña de Lanzamiento 360°",
         categoria: "campanas",
-        precio: 1200.00,
+        precio: 9360.00,
         imagen: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
         descripcion: "Estrategia completa de lanzamiento con material gráfico, plan de medios y comunicación integral."
     },
@@ -125,18 +125,19 @@ const servicios = [
         id: 14,
         nombre: "Relanzamiento de Marca",
         categoria: "campanas",
-        precio: 1000.00,
+        precio: 7800.00,
+        precioOriginal: 10400.00,
         imagen: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
         descripcion: "Renovación completa de imagen y estrategia para marcas existentes.",
         descuento: 25
     },
 
-    // ASESORÍA EN POSICIONAMIENTO Y REPUTACIÓN (agregados)
+    // ASESORÍA EN POSICIONAMIENTO Y REPUTACIÓN
     {
         id: 15,
         nombre: "Consultoría Estratégica de Marca",
         categoria: "asesoria",
-        precio: 400.00,
+        precio: 3120.00,
         imagen: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
         descripcion: "Asesoramiento especializado para definir y fortalecer la estrategia de tu marca en el mercado."
     },
@@ -144,8 +145,8 @@ const servicios = [
         id: 16,
         nombre: "Gestión de Reputación Online",
         categoria: "asesoria",
-        precio: 350.00,
-        precioOriginal: 450.00,
+        precio: 2730.00,
+        precioOriginal: 3510.00,
         imagen: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
         descripcion: "Monitoreo y gestión de la reputación digital de tu marca en todas las plataformas.",
         descuento: 22
@@ -154,7 +155,7 @@ const servicios = [
         id: 17,
         nombre: "Workshop de Branding Empresarial",
         categoria: "asesoria",
-        precio: 250.00,
+        precio: 1950.00,
         imagen: "https://images.unsplash.com/photo-1553484771-371a605b060b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
         descripcion: "Capacitación especializada para equipos sobre implementación y gestión de marca."
     }
@@ -184,7 +185,103 @@ document.addEventListener('DOMContentLoaded', function() {
     actualizarCarrito();
     initEventListeners();
     initScrollEffects();
+    initResponsiveFeatures();
 });
+
+// Nuevas funciones para características responsivas
+function initResponsiveFeatures() {
+    // Mejorar el comportamiento del navbar en dispositivos móviles
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    
+    if (navbarToggler && navbarCollapse) {
+        // Cerrar menú cuando se hace clic en un enlace (móviles)
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth < 992) {
+                    const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                        hide: true
+                    });
+                }
+            });
+        });
+        
+        // Cerrar menú cuando se hace clic fuera (móviles)
+        document.addEventListener('click', (e) => {
+            if (window.innerWidth < 992) {
+                if (!navbarCollapse.contains(e.target) && !navbarToggler.contains(e.target)) {
+                    if (navbarCollapse.classList.contains('show')) {
+                        const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                            hide: true
+                        });
+                    }
+                }
+            }
+        });
+    }
+    
+    // Optimizar imágenes para diferentes dispositivos
+    optimizeImagesForDevice();
+    
+    // Mejorar el comportamiento de los modales en móviles
+    optimizeModalsForMobile();
+    
+    // Ajustar comportamiento de scroll en dispositivos táctiles
+    optimizeScrollForTouch();
+}
+
+function optimizeImagesForDevice() {
+    const images = document.querySelectorAll('img');
+    const isHighDPI = window.devicePixelRatio > 1;
+    const isMobile = window.innerWidth < 768;
+    
+    images.forEach(img => {
+        // Lazy loading para mejor rendimiento
+        img.loading = 'lazy';
+        
+        // Optimizar quality según el dispositivo
+        if (img.src.includes('unsplash.com')) {
+            let quality = isMobile ? '60' : '80';
+            if (isHighDPI) quality = '85';
+            
+            img.src = img.src.replace(/&q=\d+/, `&q=${quality}`);
+        }
+    });
+}
+
+function optimizeModalsForMobile() {
+    const modals = document.querySelectorAll('.modal');
+    
+    modals.forEach(modal => {
+        modal.addEventListener('show.bs.modal', function() {
+            // Prevenir scroll del body en móviles
+            if (window.innerWidth < 768) {
+                document.body.style.overflow = 'hidden';
+                document.body.style.paddingRight = '0px';
+            }
+        });
+        
+        modal.addEventListener('hidden.bs.modal', function() {
+            // Restaurar scroll del body
+            document.body.style.overflow = '';
+            document.body.style.paddingRight = '';
+        });
+    });
+}
+
+function optimizeScrollForTouch() {
+    // Mejorar el smooth scroll en dispositivos táctiles
+    if ('ontouchstart' in window) {
+        document.documentElement.style.scrollBehavior = 'smooth';
+        
+        // Optimizar el scroll para iOS Safari
+        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+        if (isIOS) {
+            document.body.style.webkitOverflowScrolling = 'touch';
+        }
+    }
+}
 
 // Función mejorada para cargar servicios con validación
 function cargarServicios() {
@@ -195,7 +292,7 @@ function cargarServicios() {
     mostrarServicios(servicios);
 }
 
-// Event Listeners
+// Event Listeners mejorados para responsive
 function initEventListeners() {
     // Filtros de productos
     document.querySelectorAll('.filter-btn').forEach(btn => {
@@ -235,30 +332,53 @@ function initEventListeners() {
         });
     });
 
-    // Smooth scroll para navegación
+    // Smooth scroll para navegación mejorado
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
+                // Ajustar offset según el dispositivo
+                const offset = window.innerWidth < 768 ? 80 : 100;
+                const targetPosition = target.offsetTop - offset;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
                 });
             }
         });
     });
 
     // Checkout button
-    checkoutBtn.addEventListener('click', function() {
-        if (carrito.length > 0) {
-            alert('¡Gracias por tu compra! Redirigiendo al proceso de pago...');
-            // Aquí podrías integrar con un sistema de pago real
-        }
+    if (checkoutBtn) {
+        checkoutBtn.addEventListener('click', function() {
+            if (carrito.length > 0) {
+                enviarPorWhatsApp();
+            }
+        });
+    }
+    
+    // Event listeners para cambios de orientación
+    window.addEventListener('orientationchange', function() {
+        setTimeout(() => {
+            // Recalcular dimensiones después del cambio de orientación
+            window.dispatchEvent(new Event('resize'));
+        }, 100);
+    });
+    
+    // Event listener para cambios de tamaño de ventana
+    let resizeTimeout;
+    window.addEventListener('resize', function() {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+            // Reoptimizar para el nuevo tamaño
+            optimizeImagesForDevice();
+        }, 250);
     });
 }
 
-// Efectos de scroll
+// Efectos de scroll mejorados para responsive
 function initScrollEffects() {
     let ticking = false;
 
@@ -266,13 +386,17 @@ function initScrollEffects() {
         const navbar = document.querySelector('.navbar');
         const scrollY = window.scrollY;
         
-        // Navbar transparency on scroll
-        if (scrollY > 100) {
+        // Navbar transparency on scroll con ajustes responsive
+        const threshold = window.innerWidth < 768 ? 50 : 100;
+        
+        if (scrollY > threshold) {
             navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
             navbar.style.backdropFilter = 'blur(20px)';
+            navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
         } else {
             navbar.style.backgroundColor = 'rgba(255, 255, 255, 1)';
             navbar.style.backdropFilter = 'blur(10px)';
+            navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.04)';
         }
 
         // Highlight active nav link based on scroll position
@@ -280,8 +404,10 @@ function initScrollEffects() {
         const navLinks = document.querySelectorAll('.nav-link');
         let current = '';
         
+        const offset = window.innerWidth < 768 ? 100 : 150;
+        
         sections.forEach(section => {
-            const sectionTop = section.offsetTop - 100;
+            const sectionTop = section.offsetTop - offset;
             if (scrollY >= sectionTop) {
                 current = section.getAttribute('id');
             }
@@ -304,12 +430,7 @@ function initScrollEffects() {
         }
     }
 
-    window.addEventListener('scroll', requestTick);
-}
-
-// Cargar y mostrar servicios
-function cargarServicios() {
-    mostrarServicios(servicios);
+    window.addEventListener('scroll', requestTick, { passive: true });
 }
 
 function mostrarServicios(serviciosArray) {
@@ -328,27 +449,28 @@ function mostrarServicios(serviciosArray) {
         const servicioCard = crearServicioCard(servicio);
         serviciosGrid.appendChild(servicioCard);
         
-        // Animación escalonada
+        // Animación escalonada optimizada para móviles
+        const delay = window.innerWidth < 768 ? index * 50 : index * 100;
         setTimeout(() => {
             servicioCard.classList.add('fade-in-up');
-        }, index * 100);
+        }, delay);
     });
 }
 
 function crearServicioCard(servicio) {
     const col = document.createElement('div');
-    col.className = 'col-lg-3 col-md-4 col-sm-6';
+    col.className = 'col-lg-3 col-md-4 col-sm-6 col-12';
     
     const descuentoHtml = servicio.descuento ? 
         `<div class="discount-badge">-${servicio.descuento}%</div>` : '';
     
     const precioOriginalHtml = servicio.precioOriginal ? 
-        `<span class="product-original-price me-2">$${servicio.precioOriginal}</span>` : '';
+        `<span class="product-original-price me-2">Q${servicio.precioOriginal.toLocaleString('es-GT', {minimumFractionDigits: 2})}</span>` : '';
     
     col.innerHTML = `
         <div class="card product-card h-100 position-relative">
             ${descuentoHtml}
-            <img src="${servicio.imagen}" class="card-img-top product-img" alt="${servicio.nombre}">
+            <img src="${servicio.imagen}" class="card-img-top product-img" alt="${servicio.nombre}" loading="lazy">
             <div class="card-body d-flex flex-column">
                 <h5 class="card-title">${servicio.nombre}</h5>
                 <p class="card-text text-muted flex-grow-1">${servicio.descripcion}</p>
@@ -356,7 +478,7 @@ function crearServicioCard(servicio) {
                     <div class="d-flex align-items-center justify-content-between mb-3">
                         <div class="price-container">
                             ${precioOriginalHtml}
-                            <span class="product-price">$${servicio.precio}</span>
+                            <span class="product-price">Q${servicio.precio.toLocaleString('es-GT', {minimumFractionDigits: 2})}</span>
                         </div>
                     </div>
                     <button class="btn btn-primary w-100" onclick="agregarAlCarrito(${servicio.id})">
@@ -370,7 +492,7 @@ function crearServicioCard(servicio) {
     return col;
 }
 
-// Filtros de servicios
+// Resto de funciones (sin cambios significativos, solo optimizaciones menores)
 function setFiltroActivo(botonActivo) {
     document.querySelectorAll('.filter-btn').forEach(btn => {
         btn.classList.remove('active');
@@ -417,15 +539,18 @@ function filtrarPorCategoria(categoria) {
     setTimeout(() => {
         const serviciosSection = document.getElementById('servicios');
         if (serviciosSection) {
-            serviciosSection.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
+            const offset = window.innerWidth < 768 ? 80 : 100;
+            const targetPosition = serviciosSection.offsetTop - offset;
+            
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
             });
         }
     }, 100);
 }
 
-// Funciones del carrito
+// Funciones del carrito (actualizadas con formato de quetzales)
 function agregarAlCarrito(servicioId) {
     const servicio = servicios.find(p => p.id === servicioId);
     if (!servicio) return;
@@ -469,11 +594,13 @@ function actualizarCarrito() {
     const precioTotal = carrito.reduce((total, item) => total + (item.precio * item.cantidad), 0);
     
     // Actualizar contador
-    cartCount.textContent = cantidadTotal;
+    if (cartCount) {
+        cartCount.textContent = cantidadTotal;
+    }
     
-    // Actualizar total
+    // Actualizar total con formato de quetzales
     if (cartTotal) {
-        cartTotal.textContent = precioTotal.toFixed(2);
+        cartTotal.textContent = `Q${precioTotal.toLocaleString('es-GT', {minimumFractionDigits: 2})}`;
     }
     
     // Actualizar contenido del carrito
@@ -527,7 +654,7 @@ function mostrarItemsCarrito() {
                     </div>
                 </div>
                 <div class="col-md-2">
-                    <span class="fw-bold">$${item.precio}</span>
+                    <span class="fw-bold">Q${item.precio.toLocaleString('es-GT', {minimumFractionDigits: 2})}</span>
                 </div>
                 <div class="col-md-2">
                     <button class="btn btn-outline-danger btn-sm" onclick="eliminarDelCarrito(${item.id})">
@@ -553,7 +680,7 @@ function enviarPorWhatsApp() {
     }
 
     const mensajeItems = serviciosValidos.map(item => 
-        `• ${item.nombre} (Cantidad: ${item.cantidad || 1}) - $${((item.precio || 0) * (item.cantidad || 1)).toFixed(2)}`
+        `• ${item.nombre} (Cantidad: ${item.cantidad || 1}) - Q${((item.precio || 0) * (item.cantidad || 1)).toLocaleString('es-GT', {minimumFractionDigits: 2})}`
     ).join('\n');
     
     const total = serviciosValidos.reduce((sum, item) => sum + ((item.precio || 0) * (item.cantidad || 1)), 0);
@@ -564,7 +691,7 @@ Me interesa contratar los siguientes servicios:
 
 ${mensajeItems}
 
-📝 *Total: $${total.toFixed(2)}*
+📝 *Total: Q${total.toLocaleString('es-GT', {minimumFractionDigits: 2})}*
 
 ¿Podrían enviarme más información sobre estos servicios y el proceso para continuar?
 
